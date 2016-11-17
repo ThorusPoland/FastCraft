@@ -7,5 +7,5 @@ interface InventoryProvider<TItem> {
 
     fun getNewItem(): ItemAdapter<TItem>
 
-    fun getNewInventory(): InventoryAdapter<TItem>
+    fun getNewInventory(height: Int, title: String?): InventoryAdapter<TItem>
 }
