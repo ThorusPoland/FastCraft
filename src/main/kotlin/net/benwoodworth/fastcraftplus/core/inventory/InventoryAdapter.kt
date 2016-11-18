@@ -72,8 +72,7 @@ abstract class InventoryAdapter<TItem> {
         items@for (item in items) {
             var remaining = item.amount
 
-            for (i in 0..contents.size) {
-                if (i == contents.size) return false
+            for (i in contents.indices) {
                 if (!contents[i].isSimilar(item)) continue
 
                 if (amounts[i] < remaining) {
@@ -84,6 +83,9 @@ abstract class InventoryAdapter<TItem> {
                     continue@items
                 }
             }
+
+            if (remaining > 0)
+                return false
         }
 
         return true
