@@ -112,4 +112,9 @@ class InventoryAdapterTests {
                 )
         )
     }
+
+    @Test
+    fun failingExperimentalTest() {
+        Assert.fail("This experimental test should make the Travis-CI build fail.")
+    }
 }
