@@ -5,7 +5,9 @@ package net.benwoodworth.fastcraftplus.core.inventory
  */
 interface InventoryProvider<TItem> {
 
-    fun getNewItem(): ItemAdapter<TItem>
+    fun getItem(): FcItem<TItem>
 
-    fun getNewInventory(height: Int, title: String?): InventoryAdapter<TItem>
+    fun getChestInventory(height: Int, title: String?): FcChestInventory<TItem>
+
+    fun getCraftingInventory(matrixWidth: Int, matrixHeight: Int, title: String?): FcCraftingInventory<TItem>
 }

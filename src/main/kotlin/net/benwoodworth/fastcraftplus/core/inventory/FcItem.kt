@@ -5,7 +5,7 @@ package net.benwoodworth.fastcraftplus.core.inventory
  *
  * @param <TItem> The type of item being adapted.
  */
-abstract class ItemAdapter<TItem> {
+abstract class FcItem<TItem> {
     /**
      * The base item being adapted.
      */
@@ -41,6 +41,12 @@ abstract class ItemAdapter<TItem> {
         set
 
     /**
+     * Get the maximum size of this stack.
+     */
+    abstract val maxStackSize: Int
+        get
+
+    /**
      * Add an enchantment to the item.
      *
      * @param enchantmentId The Minecraft enchantment ID.
@@ -54,7 +60,7 @@ abstract class ItemAdapter<TItem> {
      * @param item The item to compare to.
      * @return Returns true if the items are similar.
      */
-    abstract fun isSimilar(item: ItemAdapter<TItem>): Boolean
+    abstract fun isSimilar(item: FcItem<TItem>): Boolean
 
     /**
      * Checks if this item can be used as an ingredient in a recipe.
@@ -63,7 +69,7 @@ abstract class ItemAdapter<TItem> {
      * @param ingredient The ingredient of a recipe.
      * @return Returns true if this item can be used as the ingredient.
      */
-    abstract fun matchesIngredient(ingredient: ItemAdapter<TItem>): Boolean
+    abstract fun matchesIngredient(ingredient: FcItem<TItem>): Boolean
 
     /**
      * A hash code for this item.
@@ -73,7 +79,7 @@ abstract class ItemAdapter<TItem> {
     abstract override fun hashCode(): Int
 
     /**
-     * Compare equality to an object that isn't an ItemAdapter<T>.
+     * Compare equality to an object that isn't an FcItem<T>.
      *
      * @return Returns false.
      */
@@ -84,7 +90,7 @@ abstract class ItemAdapter<TItem> {
      *
      * @return Returns whether the items are equal.
      */
-    fun equals(other: ItemAdapter<TItem>): Boolean {
+    fun equals(other: FcItem<TItem>): Boolean {
         return isSimilar(other) && amount == other.amount
     }
 }

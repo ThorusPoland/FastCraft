@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraftplus.core.players
 import net.benwoodworth.fastcraftplus.core.permissions.Permission
 import java.util.*
 
-interface PlayerAdapter {
+interface FcPlayer {
     val Name: String
         get
 
