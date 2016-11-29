@@ -10,41 +10,36 @@ abstract class FcItem<TItem> {
      * The base item being adapted.
      */
     abstract val base: TItem
-        get
 
     /**
      * The Minecraft item type ID.
      */
     abstract var typeId: String
-        get
-        set
 
     /**
      * The amount of items in this stack.
      */
     abstract var amount: Int
-        get
-        set
 
     /**
      * The display name of this item.
      */
     abstract var displayName: String?
-        get
-        set
 
     /**
      * The lore of this item.
      */
     abstract var lore: Array<String>
-        get
-        set
 
     /**
      * Get the maximum size of this stack.
      */
     abstract val maxStackSize: Int
-        get
+
+    /**
+     * Whether this item, as an ingredient, matches any item of the same type, regardless of data.
+     */
+    abstract val wildcardData: Boolean
 
     /**
      * Add an enchantment to the item.

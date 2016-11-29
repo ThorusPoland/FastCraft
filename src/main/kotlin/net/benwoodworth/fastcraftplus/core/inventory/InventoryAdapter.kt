@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraftplus.core.inventory
 
-import net.benwoodworth.fastcraftplus.core.players.PlayerAdapter
+import net.benwoodworth.fastcraftplus.core.players.FcPlayer
 
 /**
  * Adapts items so they can be used by the plugin.
@@ -10,24 +10,21 @@ abstract class InventoryAdapter<TItem> {
      * The height of the inventory.
      */
     abstract val height: Int
-        get
 
     /**
      * The title of the inventory.
      */
     abstract val title: String?
-        get
 
     /**
      * The contents of the inventory.
      */
-    abstract val contents: Array<ItemAdapter<TItem>>
-        get
+    abstract val contents: Array<FcItem<TItem>>
 
     /**
      * The players viewing the inventory.
      */
-    abstract val viewers: Array<PlayerAdapter>
+    abstract val viewers: Array<FcPlayer>
 
     /**
      * Get an item from the inventory.
@@ -36,7 +33,7 @@ abstract class InventoryAdapter<TItem> {
      * @param y The y-coordinate of the item.
      * @return The item at the given coordinates.
      */
-    abstract fun getItem(x: Int, y: Int): ItemAdapter<TItem>
+    abstract fun getItem(x: Int, y: Int): FcItem<TItem>
 
     /**
      * Set an item in the inventory.
@@ -45,7 +42,7 @@ abstract class InventoryAdapter<TItem> {
      * @param y The y-coordinate of the item.
      * @param item The item to set.
      */
-    abstract fun setItem(x: Int, y: Int, item: ItemAdapter<TItem>)
+    abstract fun setItem(x: Int, y: Int, item: FcItem<TItem>)
 
     /**
      * Add items to the inventory.
@@ -53,7 +50,7 @@ abstract class InventoryAdapter<TItem> {
      * @param items The items to add.
      * @return Items that could not be added to the inventory.
      */
-    abstract fun addItems(vararg items: ItemAdapter<TItem>): Array<ItemAdapter<TItem>>
+    abstract fun addItems(vararg items: FcItem<TItem>): Array<FcItem<TItem>>
 
     /**
      * Remove items from the inventory.
@@ -61,12 +58,12 @@ abstract class InventoryAdapter<TItem> {
      * @param items The items to remove.
      * @return Items that could not be removed from the inventory.
      */
-    abstract fun removeItems(vararg items: ItemAdapter<TItem>): Array<ItemAdapter<TItem>>
+    abstract fun removeItems(vararg items: FcItem<TItem>): Array<FcItem<TItem>>
 
     /**
      * See if items are all in the inventory.
      */
-    fun contains(vararg items: ItemAdapter<TItem>): Boolean {
+    fun contains(vararg items: FcItem<TItem>): Boolean {
         val amounts = Array(contents.size, {contents[it].amount})
 
         items@for (item in items) {

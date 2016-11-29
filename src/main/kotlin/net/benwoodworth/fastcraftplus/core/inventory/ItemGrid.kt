@@ -9,13 +9,11 @@ interface ItemGrid<TItem> {
      * The width of the item grid.
      */
     val width: Int
-        get
 
     /**
      * The height of the item grid.
      */
     val height: Int
-        get
 
     /**
      * Get an item from the item grid.
