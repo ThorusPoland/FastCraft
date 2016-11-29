@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraftplus.core.recipes
 
 /**
- * Created by bwoodworth on 11/17/2016.
+ * A crafting recipe.
  */
 interface FcRecipe<TItem> {
 

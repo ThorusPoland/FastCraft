@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraftplus.core.recipes
 
-import net.benwoodworth.fastcraftplus.core.inventory.ItemAdapter
+import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.permissions.Permission
 
 /**
@@ -11,20 +11,17 @@ abstract class RecipeAdapter<TItem> {
     /**
      * The ingredients in this recipe.
      */
-    abstract val ingredients: Array<ItemAdapter<TItem>>
-        get
+    abstract val ingredients: Array<FcItem<TItem>>
 
     /**
      * The results of this recipe.
      */
-    abstract val results: Array<ItemAdapter<TItem>>
-        get
+    abstract val results: Array<FcItem<TItem>>
 
     /**
      * The permissions required to craft this recipe.
      */
     abstract val permissions: Array<Permission>
-        get
 
     /**
      * Checks if this recipe is equal to another.
