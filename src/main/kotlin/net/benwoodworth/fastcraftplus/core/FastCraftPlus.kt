@@ -4,7 +4,7 @@ import net.benwoodworth.fastcraftplus.core.inventory.InventoryProvider
 
 abstract class FastCraftPlus(
         val logger: ConsoleLogger,
-        val inventoryProvider: InventoryProvider<Any> //,
+        val inventoryProvider: InventoryProvider<*> //,
 //        val api: FastCraftPlusApi,
 //
 //        val configProvider: ConfigProvider,

@@ -5,7 +5,7 @@ import net.benwoodworth.fastcraftplus.core.recipes.FcRecipe
 /**
  * A crafting inventory.
  */
-interface FcCraftingInventory<TItem> {
+interface FcCraftingInventory<TItem : FcItem<*>> : FcInventory<TItem> {
 
     /**
      * The ingredient matrix in this crafting inventory.

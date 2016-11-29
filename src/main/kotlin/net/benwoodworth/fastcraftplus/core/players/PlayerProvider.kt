@@ -5,5 +5,4 @@ package net.benwoodworth.fastcraftplus.core.players
  */
 interface PlayerProvider {
 
-
 }

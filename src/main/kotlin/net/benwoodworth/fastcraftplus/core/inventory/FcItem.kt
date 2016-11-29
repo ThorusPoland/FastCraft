@@ -1,15 +1,15 @@
 package net.benwoodworth.fastcraftplus.core.inventory
 
 /**
- * Adapts an item object for use by FastCraft+.
+ * A Minecraft item.
  *
- * @param <TItem> The type of item being adapted.
+ * @param <TBase> The item type from the native server platform.
  */
-abstract class FcItem<TItem> {
+abstract class FcItem<TBase> {
     /**
      * The base item being adapted.
      */
-    abstract val base: TItem
+    abstract val base: TBase
 
     /**
      * The Minecraft item type ID.
@@ -55,7 +55,7 @@ abstract class FcItem<TItem> {
      * @param item The item to compare to.
      * @return Returns true if the items are similar.
      */
-    abstract fun isSimilar(item: FcItem<TItem>): Boolean
+    abstract fun isSimilar(item: FcItem<TBase>): Boolean
 
     /**
      * Checks if this item can be used as an ingredient in a recipe.
@@ -64,7 +64,7 @@ abstract class FcItem<TItem> {
      * @param ingredient The ingredient of a recipe.
      * @return Returns true if this item can be used as the ingredient.
      */
-    abstract fun matchesIngredient(ingredient: FcItem<TItem>): Boolean
+    abstract fun matchesIngredient(ingredient: FcItem<TBase>): Boolean
 
     /**
      * A hash code for this item.
@@ -85,7 +85,7 @@ abstract class FcItem<TItem> {
      *
      * @return Returns whether the items are equal.
      */
-    fun equals(other: FcItem<TItem>): Boolean {
+    fun equals(other: FcItem<TBase>): Boolean {
         return isSimilar(other) && amount == other.amount
     }
 }

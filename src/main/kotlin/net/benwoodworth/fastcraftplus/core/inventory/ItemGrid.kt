@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraftplus.core.inventory
 /**
  * A grid of items.
  */
-interface ItemGrid<TItem> {
+interface ItemGrid<out TItem : FcItem<*>> {
 
     /**
      * The width of the item grid.
@@ -21,5 +21,5 @@ interface ItemGrid<TItem> {
      * @param x The x-coordinate within the grid, where 0 is the left column.
      * @param y The y-coordinate within the grid, where 0 is the top row.
      */
-    fun getItem(x: Int, y: Int): FcItem<TItem>
+    fun getItem(x: Int, y: Int): TItem
 }

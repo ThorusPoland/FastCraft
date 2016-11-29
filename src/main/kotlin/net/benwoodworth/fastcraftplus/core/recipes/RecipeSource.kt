@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraftplus.core.recipes
 /**
  * A source of recipes.
  */
-interface RecipeSource<TItem> {
+interface RecipeSource<TRecipe : FcRecipe<*>> {
 
-    fun getCraftingRecipes(): Array<RecipeAdapter<TItem>>
+    fun getCraftingRecipes(): Array<TRecipe>
 }

@@ -5,7 +5,7 @@ import java.util.*
 /**
  * A rectangular chest inventory.
  */
-abstract class FcChestInventory<TItem> : FcInventory<TItem> {
+abstract class FcChestInventory<TItem : FcItem<*>> : FcInventory<TItem> {
 
     /**
      * The contents of the inventory.
