@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraftplus.core.recipe
 
 /**
- * A source of recipe.
+ * A source of recipes. (Bukkit, Sponge, plugins, etc.)
  */
 interface RecipeSource<TRecipe : FcRecipe<*>> {
 
