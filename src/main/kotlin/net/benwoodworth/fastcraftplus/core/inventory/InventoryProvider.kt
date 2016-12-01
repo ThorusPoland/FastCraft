@@ -17,5 +17,5 @@ interface InventoryProvider<TItem : FcItem<*>> {
      * @param title The title of the inventory.
      * @return A chest inventory with the specified height and title.
      */
-    fun createGridInventory(height: Int, title: String?): FcChestInventory<TItem>
+    fun createInventory(height: Int, title: String?): FcInventory<TItem>
 }

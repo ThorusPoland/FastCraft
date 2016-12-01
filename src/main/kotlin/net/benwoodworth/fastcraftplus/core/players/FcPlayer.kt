@@ -1,9 +1,16 @@
 package net.benwoodworth.fastcraftplus.core.players
 
+import net.benwoodworth.fastcraftplus.core.inventory.FcInventory
+import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.permissions.Permission
 import java.util.*
 
-interface FcPlayer {
+/**
+ * A Minecraft player.
+ *
+ * @param TItem The type of item the player carries.
+ */
+interface FcPlayer<TItem : FcItem<*>> {
 
     /**
      * The player's name.
@@ -28,4 +35,11 @@ interface FcPlayer {
      * @param permission The permission to check.
      */
     fun hasPermission(permission: Permission): Boolean
+
+    /**
+     * Open an inventory.
+     *
+     * @param inventory The inventory to open.
+     */
+    fun openInventory(inventory: FcInventory<TItem>)
 }

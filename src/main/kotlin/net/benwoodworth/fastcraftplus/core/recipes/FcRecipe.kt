@@ -1,7 +1,10 @@
 package net.benwoodworth.fastcraftplus.core.recipes
 
+import net.benwoodworth.fastcraftplus.core.events.FcCraftEvent
+import net.benwoodworth.fastcraftplus.core.inventory.FcInventory
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.permissions.Permission
+import net.benwoodworth.fastcraftplus.core.players.FcPlayer
 
 /**
  * Adapts a recipe from the native implementation.
@@ -22,6 +25,13 @@ abstract class FcRecipe<TItem : FcItem<*>> {
      * The permissions required to craft this recipe.
      */
     abstract val permissions: Array<Permission>
+
+    /**
+     * Simulate the crafting of this item with this recipe.
+     *
+     * @return Returns the resulting crafting event.
+     */
+    abstract fun simulateCraft(player: FcPlayer<TItem>): FcCraftEvent<*, TItem>
 
     /**
      * Checks if this recipe is equal to another.

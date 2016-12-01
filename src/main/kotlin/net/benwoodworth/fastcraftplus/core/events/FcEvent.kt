@@ -3,13 +3,13 @@ package net.benwoodworth.fastcraftplus.core.events
 /**
  * Adapts an event from a native implementation.
  *
- * @param TBase The base event of this event.
+ * @param TBase The base event from the server platform.
  */
-interface FcEvent<TBase> {
+interface FcEvent<out TBase> {
     /**
      * The base of this event.
      */
-    val base: TBase
+    val baseEvent: TBase
 
     /**
      * Whether this event has been cancelled.

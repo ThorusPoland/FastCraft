@@ -1,17 +1,23 @@
 package net.benwoodworth.fastcraftplus.core.events
 
-import net.benwoodworth.fastcraftplus.core.inventory.FcCraftingInventory
+import net.benwoodworth.fastcraftplus.core.inventory.FcItem
+import net.benwoodworth.fastcraftplus.core.inventory.ItemGrid
 
 /**
  * Event for crafting items.
  *
- * @param TBase The type of base event from the native server platform.
- * @param TInventory The type of crafting inventory used this event.
+ * @param TBase The base event from the server platform.
+ * @param TItem The type of item.
  */
-interface FcCraftEvent<TBase, out TInventory : FcCraftingInventory<*>> : FcEvent<TBase> {
+interface FcCraftEvent<out TBase, out TItem : FcItem<*>> : FcEvent<TBase> {
 
     /**
      * The inventory that was used to craft an item.
      */
-    val inventory: TInventory
+    val matrix: ItemGrid<TItem>
+
+    /**
+     * The crafting item results.
+     */
+    val results: List<TItem>
 }
