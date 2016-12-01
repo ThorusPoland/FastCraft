@@ -1,18 +1,18 @@
-package net.benwoodworth.fastcraftplus.core.players
+package net.benwoodworth.fastcraftplus.core.player
 
 import java.util.*
 
 /**
- * Provides players for the plugin.
+ * Provides player for the plugin.
  *
  * @param TPlayer The type of player.
  */
 interface PlayerProvider<out TPlayer : FcPlayer<*>> {
 
     /**
-     * Get a list of online players.
+     * Get a list of online player.
      *
-     * @return A list of online players.
+     * @return A list of online player.
      */
     fun getOnlinePlayers(): List<TPlayer>
 

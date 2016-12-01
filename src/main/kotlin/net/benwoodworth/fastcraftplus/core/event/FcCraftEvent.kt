@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraftplus.core.events
+package net.benwoodworth.fastcraftplus.core.event
 
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.inventory.ItemGrid

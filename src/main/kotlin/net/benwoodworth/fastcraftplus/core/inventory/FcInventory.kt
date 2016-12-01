@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraftplus.core.inventory
 
-import net.benwoodworth.fastcraftplus.core.players.FcPlayer
+import net.benwoodworth.fastcraftplus.core.player.FcPlayer
 import java.util.*
 
 /**
@@ -19,7 +19,7 @@ abstract class FcInventory<TItem : FcItem<*>> {
     abstract val title: String?
 
     /**
-     * The players viewing the inventory.
+     * The player viewing the inventory.
      */
     abstract val viewers: List<FcPlayer<TItem>>
 

@@ -1,9 +1,9 @@
-package net.benwoodworth.fastcraftplus.core.recipes
+package net.benwoodworth.fastcraftplus.core.recipe
 
 import kotlin.collections.MutableList
 
 /**
- * Provides recipes from the server.
+ * Provides recipe from the server.
  */
 abstract class RecipeProvider<TRecipe : FcRecipe<*>> {
 
@@ -13,7 +13,7 @@ abstract class RecipeProvider<TRecipe : FcRecipe<*>> {
     abstract fun getRecipeSources(): Array<RecipeSource<TRecipe>>
 
     /**
-     * Get recipes on the server.
+     * Get recipe on the server.
      */
     fun getServerCraftingRecipes(): List<TRecipe> {
         val recipes = arrayListOf<TRecipe>()

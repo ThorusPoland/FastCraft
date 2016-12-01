@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraftplus.core.players
+package net.benwoodworth.fastcraftplus.core.player
 
 import net.benwoodworth.fastcraftplus.core.inventory.FcInventory
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
-import net.benwoodworth.fastcraftplus.core.permissions.Permission
+import net.benwoodworth.fastcraftplus.core.permission.Permission
 import java.util.*
 
 /**

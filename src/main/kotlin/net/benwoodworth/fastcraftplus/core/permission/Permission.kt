@@ -1,7 +1,7 @@
-package net.benwoodworth.fastcraftplus.core.permissions
+package net.benwoodworth.fastcraftplus.core.permission
 
 /**
- * Plugin permissions.
+ * Plugin permission.
  */
 enum class Permission(val Permission: String) {
     USE("fastcraft.use"),

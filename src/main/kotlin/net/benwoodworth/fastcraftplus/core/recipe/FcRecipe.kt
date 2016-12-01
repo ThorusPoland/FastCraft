@@ -1,10 +1,10 @@
-package net.benwoodworth.fastcraftplus.core.recipes
+package net.benwoodworth.fastcraftplus.core.recipe
 
-import net.benwoodworth.fastcraftplus.core.events.FcCraftEvent
+import net.benwoodworth.fastcraftplus.core.event.FcCraftEvent
 import net.benwoodworth.fastcraftplus.core.inventory.FcInventory
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
-import net.benwoodworth.fastcraftplus.core.permissions.Permission
-import net.benwoodworth.fastcraftplus.core.players.FcPlayer
+import net.benwoodworth.fastcraftplus.core.permission.Permission
+import net.benwoodworth.fastcraftplus.core.player.FcPlayer
 
 /**
  * Adapts a recipe from the native implementation.
@@ -22,7 +22,7 @@ abstract class FcRecipe<TItem : FcItem<*>> {
     abstract val results: Array<TItem>
 
     /**
-     * The permissions required to craft this recipe.
+     * The permission required to craft this recipe.
      */
     abstract val permissions: Array<Permission>
 
@@ -36,7 +36,7 @@ abstract class FcRecipe<TItem : FcItem<*>> {
     /**
      * Checks if this recipe is equal to another.
      *
-     * @return Returns true if the recipes are equal.
+     * @return Returns true if the recipe are equal.
      */
     abstract fun equals(recipe: FcRecipe<TItem>): Boolean
 
