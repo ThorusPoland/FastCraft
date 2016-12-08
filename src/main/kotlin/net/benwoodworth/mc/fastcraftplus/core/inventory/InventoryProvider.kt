@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraftplus.core.inventory
+package net.benwoodworth.mc.fastcraftplus.core.inventory
 
 /**
  * Provides inventories and items for the plugin.

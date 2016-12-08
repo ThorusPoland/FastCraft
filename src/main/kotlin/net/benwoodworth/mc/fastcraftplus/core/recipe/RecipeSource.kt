@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraftplus.core.recipe
+package net.benwoodworth.mc.fastcraftplus.core.recipe
 
 /**
  * A source of recipes. (Bukkit, Sponge, plugins, etc.)

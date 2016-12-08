@@ -1,6 +1,6 @@
-package net.benwoodworth.fastcraftplus.core.inventory
+package net.benwoodworth.mc.fastcraftplus.core.inventory
 
-import net.benwoodworth.fastcraftplus.core.player.FcPlayer
+import net.benwoodworth.mc.fastcraftplus.core.player.FcPlayer
 import java.util.*
 
 /**

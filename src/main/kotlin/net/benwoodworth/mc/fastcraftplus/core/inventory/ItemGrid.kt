@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraftplus.core.inventory
+package net.benwoodworth.mc.fastcraftplus.core.inventory
 
 /**
  * A grid of items.

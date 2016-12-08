@@ -1,7 +1,7 @@
-package net.benwoodworth.fastcraftplus.core
+package net.benwoodworth.mc.fastcraftplus.core
 
-import net.benwoodworth.fastcraftplus.core.api.FastCraftApi
-import net.benwoodworth.fastcraftplus.core.inventory.InventoryProvider
+import net.benwoodworth.mc.fastcraftplus.core.api.FastCraftApi
+import net.benwoodworth.mc.fastcraftplus.core.inventory.InventoryProvider
 
 abstract class FastCraftPlus(
         val logger: ConsoleLogger,

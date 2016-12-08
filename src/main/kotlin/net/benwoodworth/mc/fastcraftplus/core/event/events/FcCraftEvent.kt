@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraftplus.core.event.events
+package net.benwoodworth.mc.fastcraftplus.core.event.events
 
-import net.benwoodworth.fastcraftplus.core.event.FcEvent
-import net.benwoodworth.fastcraftplus.core.inventory.FcItem
-import net.benwoodworth.fastcraftplus.core.inventory.ItemGrid
+import net.benwoodworth.mc.fastcraftplus.core.event.FcEvent
+import net.benwoodworth.mc.fastcraftplus.core.inventory.FcItem
+import net.benwoodworth.mc.fastcraftplus.core.inventory.ItemGrid
 
 /**
  * Event for crafting items.
