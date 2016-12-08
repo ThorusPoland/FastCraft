@@ -1,6 +1,6 @@
-IMPORTANT:
-Fill out the required ■ lines, and remove these top lines.
-The ■ character should not appear in theis issue once filled out.
+IMPORTANT:  
+Fill out the required ■ lines, and remove these top lines.  
+The ■ character should not appear in this issue once filled out.
 
 ## Description
 ■ Describe the issue here.
