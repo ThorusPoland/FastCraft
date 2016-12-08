@@ -1,4 +1,4 @@
-package net.benwoodworth.mc.fastcraftplus.core.permission
+package net.benwoodworth.fastcraft.core.api.permission
 
 /**
  * Plugin permission.

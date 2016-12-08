@@ -1,4 +1,4 @@
-package net.benwoodworth.mc.fastcraftplus.core.event
+package net.benwoodworth.fastcraft.core.api.event
 
 /**
  * Listens to events, and notifies event handlers when events occur.

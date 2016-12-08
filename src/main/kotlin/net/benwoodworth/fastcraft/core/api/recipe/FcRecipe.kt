@@ -1,10 +1,10 @@
-package net.benwoodworth.mc.fastcraftplus.core.recipe
+package net.benwoodworth.fastcraft.core.api.recipe
 
-import net.benwoodworth.mc.fastcraftplus.core.event.events.FcCraftEvent
-import net.benwoodworth.mc.fastcraftplus.core.inventory.FcInventory
-import net.benwoodworth.mc.fastcraftplus.core.inventory.FcItem
-import net.benwoodworth.mc.fastcraftplus.core.permission.Permission
-import net.benwoodworth.mc.fastcraftplus.core.player.FcPlayer
+import net.benwoodworth.fastcraft.core.api.event.events.FcCraftEvent
+import net.benwoodworth.fastcraft.core.api.inventory.FcInventory
+import net.benwoodworth.fastcraft.core.api.inventory.FcItem
+import net.benwoodworth.fastcraft.core.api.permission.Permission
+import net.benwoodworth.fastcraft.core.api.player.FcPlayer
 
 /**
  * Adapts a recipe from the native implementation.

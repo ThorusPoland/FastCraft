@@ -1,4 +1,4 @@
-package net.benwoodworth.mc.fastcraftplus.core.event
+package net.benwoodworth.fastcraft.core.api.event
 
 /**
  * Adapts an event from a native implementation.

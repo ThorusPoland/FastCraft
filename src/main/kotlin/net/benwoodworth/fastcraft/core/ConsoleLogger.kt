@@ -1,4 +1,4 @@
-package net.benwoodworth.mc.fastcraftplus.core
+package net.benwoodworth.fastcraft.core
 
 interface ConsoleLogger {
 

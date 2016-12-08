@@ -1,4 +1,4 @@
-package net.benwoodworth.mc.fastcraftplus.core.recipe
+package net.benwoodworth.fastcraft.core.api.recipe
 
 import kotlin.collections.MutableList
 
