@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraftplus.core.recipe
 
-import net.benwoodworth.fastcraftplus.core.event.FcCraftEvent
+import net.benwoodworth.fastcraftplus.core.event.events.FcCraftEvent
 import net.benwoodworth.fastcraftplus.core.inventory.FcInventory
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.permission.Permission

@@ -1,5 +1,6 @@
-package net.benwoodworth.fastcraftplus.core.event
+package net.benwoodworth.fastcraftplus.core.event.events
 
+import net.benwoodworth.fastcraftplus.core.event.FcEvent
 import net.benwoodworth.fastcraftplus.core.inventory.FcItem
 import net.benwoodworth.fastcraftplus.core.inventory.ItemGrid
 
