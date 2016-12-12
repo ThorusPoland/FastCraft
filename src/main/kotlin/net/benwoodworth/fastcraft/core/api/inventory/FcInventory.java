@@ -108,8 +108,4 @@ public abstract class FcInventory<TItem> {
 
         return true;
     }
-
-    private interface ItemComparator<T extends FcItem<?>> {
-        boolean areEqual(T item0, T item1);
-    }
 }
