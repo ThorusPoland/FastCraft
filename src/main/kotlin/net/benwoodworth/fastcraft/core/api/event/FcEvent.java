@@ -1,23 +1,22 @@
-package net.benwoodworth.fastcraft.core.api.event
+package net.benwoodworth.fastcraft.core.api.event;
 
 /**
  * Adapts an event from a native implementation.
- *
- * @param TBase The base event from the server platform.
  */
-interface FcEvent<out TBase> {
+public interface FcEvent<TBase> {
+
     /**
      * The base of this event.
      */
-    val baseEvent: TBase
+    TBase getBaseEvent();
 
     /**
      * Whether this event has been cancelled.
      */
-    var cancelled: Boolean
+    boolean isCancelled();
 
     /**
      * Raise the base event.
      */
-    fun raise()
+    void raise();
 }
