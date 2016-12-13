@@ -1,32 +1,34 @@
-package net.benwoodworth.fastcraft.core
+package net.benwoodworth.fastcraft.core;
 
-interface ConsoleLogger {
+import org.jetbrains.annotations.NotNull;
+
+public interface ConsoleLogger {
 
     /**
      * Log an error to the console.
      *
      * @param message The error message to log.
      */
-    fun error(message: String)
+    void error(@NotNull String message);
 
     /**
      * Log info to the console.
      *
      * @param message The info to log.
      */
-    fun info(message: String)
+    void info(@NotNull String message);
 
     /**
      * Log a warning to the console.
      *
      * @param message The warning to log.
      */
-    fun warn(message: String)
+    void warn(@NotNull String message);
 
     /**
      * Log a debug message to the console, only if debug output is enabled.
      *
      * @param message The debug message to log.
      */
-    fun debug(message: String)
+    void debug(@NotNull String message);
 }

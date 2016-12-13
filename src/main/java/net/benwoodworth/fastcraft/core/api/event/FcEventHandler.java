@@ -1,5 +1,7 @@
 package net.benwoodworth.fastcraft.core.api.event;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Handles events that have been raised.
  */
@@ -10,5 +12,5 @@ public interface FcEventHandler<TEvent extends FcEvent<?>> {
      *
      * @param event The event that has been raised.
      */
-    void handleEvent(TEvent event);
+    void handleEvent(@NotNull TEvent event);
 }

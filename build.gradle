@@ -1,18 +1,7 @@
 group 'net.benwoodworth'
 version '2.0'
 
-buildscript {
-    ext.kotlin_version = '1.0.4'
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-apply plugin: 'kotlin'
+apply plugin: 'java'
 
 repositories {
     mavenCentral()
@@ -28,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains:annotations:13.0"
 
     compile "org.bukkit:bukkit:1.10.2-R0.1-SNAPSHOT"
     compile "org.spongepowered:spongeapi:4.0.3"
