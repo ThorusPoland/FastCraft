@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.permission;
+package net.benwoodworth.fastcraft.core.api.dependencies.permission;
 
 import org.jetbrains.annotations.NotNull;
 

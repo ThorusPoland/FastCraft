@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.event;
+package net.benwoodworth.fastcraft.core.api.dependencies.event;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Listens to events, and notifies event handlers when events occur.
  */
-public class FcEventListener<TEvent extends FcEvent<?>> {
+public class FcEventListener<TEvent extends FcEvent> {
 
     /**
      * This listener's event handlers.

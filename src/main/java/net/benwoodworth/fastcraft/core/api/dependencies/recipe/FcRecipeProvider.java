@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.recipe;
+package net.benwoodworth.fastcraft.core.api.dependencies.recipe;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @param <TItem> The native item type.
  */
-public abstract class RecipeProvider<TItem> {
+public abstract class FcRecipeProvider<TItem> {
 
     /**
      * Get recipe sources.

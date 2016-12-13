@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.player;
+package net.benwoodworth.fastcraft.core.api.dependencies.player;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @param <TItem> The native item type the player carries.
  */
-public interface PlayerProvider<TItem> {
+public interface FcPlayerProvider<TItem> {
 
     /**
      * Get a list of online player.

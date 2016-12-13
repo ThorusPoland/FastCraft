@@ -1,11 +1,11 @@
-package net.benwoodworth.fastcraft.core.api.event;
+package net.benwoodworth.fastcraft.core.api.dependencies.event;
 
 import org.jetbrains.annotations.NotNull;
 
 /**
  * Handles events that have been raised.
  */
-public interface FcEventHandler<TEvent extends FcEvent<?>> {
+public interface FcEventHandler<TEvent extends FcEvent> {
 
     /**
      * Handle an event that has been raised.

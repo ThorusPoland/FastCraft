@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.inventory;
+package net.benwoodworth.fastcraft.core.api.dependencies.inventory;
 
 import org.jetbrains.annotations.NotNull;
 

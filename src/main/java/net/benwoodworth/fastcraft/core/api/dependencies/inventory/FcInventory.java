@@ -1,6 +1,6 @@
-package net.benwoodworth.fastcraft.core.api.inventory;
+package net.benwoodworth.fastcraft.core.api.dependencies.inventory;
 
-import net.benwoodworth.fastcraft.core.api.player.FcPlayer;
+import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
