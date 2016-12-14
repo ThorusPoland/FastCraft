@@ -20,7 +20,7 @@ dependencies {
     compile "org.jetbrains:annotations:13.0"
 
     compile "org.bukkit:bukkit:1.10.2-R0.1-SNAPSHOT"
-    compile "org.spongepowered:spongeapi:4.0.3"
+    compile "org.spongepowered:spongeapi:5.0.0"
 
     testCompile "junit:junit:4.12"
     testCompile "org.mockito:mockito-core:2.2.20"
