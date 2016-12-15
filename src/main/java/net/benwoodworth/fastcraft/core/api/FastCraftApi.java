@@ -1,5 +1,6 @@
 package net.benwoodworth.fastcraft.core.api;
 
+import net.benwoodworth.fastcraft.core.api.dependencies.config.FcConfigProvider;
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcInventoryProvider;
 import net.benwoodworth.fastcraft.core.api.dependencies.permissions.FcPermissionService;
 import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayerProvider;
@@ -17,18 +18,21 @@ public class FastCraftApi<TItem> {
     private final FcPlayerProvider<TItem> playerProvider;
     private final FcRecipeService<TItem> recipeService;
     private final FcPermissionService permissionService;
+    private final FcConfigProvider configProvider;
 
     private final GuiApi<TItem> guiApi;
 
     public FastCraftApi(@NotNull FcInventoryProvider<TItem> inventoryProvider,
                         @NotNull FcPlayerProvider<TItem> playerProvider,
                         @NotNull FcRecipeService<TItem> recipeService,
-                        @NotNull FcPermissionService permissionService) {
+                        @NotNull FcPermissionService permissionService,
+                        @NotNull FcConfigProvider configProvider) {
 
         this.inventoryProvider = inventoryProvider;
         this.playerProvider = playerProvider;
         this.recipeService = recipeService;
         this.permissionService = permissionService;
+        this.configProvider = configProvider;
 
         guiApi = new GuiApi<>(this);
     }
@@ -51,6 +55,11 @@ public class FastCraftApi<TItem> {
     @NotNull
     public FcPermissionService getPermissionService() {
         return permissionService;
+    }
+
+    @NotNull
+    public FcConfigProvider getConfigProvider() {
+        return configProvider;
     }
 
     @NotNull
