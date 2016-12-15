@@ -1,12 +1,13 @@
 package net.benwoodworth.fastcraft.core.api.gui.events;
 
-import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEvent;
 import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEventCancellable;
 
 /**
- * Created by bwoodworth on 12/13/2016.
+ * A click event for GUI buttons.
+ *
+ * @param <TItem> The native item type.
  */
-public class GuiButtonClickEvent implements FcEventCancellable {
+public class GuiButtonClickEvent<TItem> implements FcEventCancellable {
 
     @Override
     public boolean isCancelled() {

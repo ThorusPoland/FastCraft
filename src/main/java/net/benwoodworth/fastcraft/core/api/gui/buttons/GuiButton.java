@@ -29,7 +29,7 @@ public class GuiButton<TItem> extends GuiLayout<TItem> {
      * @return Returns this button's click listener.
      */
     @NotNull
-    public final FcEventListener<GuiButtonClickEvent> getClickListener() {
+    public final FcEventListener<GuiButtonClickEvent<TItem>> getClickListener() {
         return clickListener;
     }
 }
