@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraft.core.api.dependencies.recipe;
+package net.benwoodworth.fastcraft.core.api.dependencies.recipes;
 
 import net.benwoodworth.fastcraft.core.api.dependencies.event.events.FcCraftEvent;
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcItem;
-import net.benwoodworth.fastcraft.core.api.dependencies.permission.Permission;
+import net.benwoodworth.fastcraft.core.api.dependencies.permissions.Permission;
 import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

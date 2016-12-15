@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraft.core.api.dependencies.player;
 
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcInventory;
-import net.benwoodworth.fastcraft.core.api.dependencies.permission.Permission;
+import net.benwoodworth.fastcraft.core.api.dependencies.permissions.Permission;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.dependencies.recipe;
+package net.benwoodworth.fastcraft.core.api.dependencies.recipes;
 
 import org.jetbrains.annotations.NotNull;
 
