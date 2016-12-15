@@ -1,11 +1,11 @@
 package net.benwoodworth.fastcraft.core.api.gui.buttons;
 
-import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayoutAbstract;
+import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout;
 
 /**
  * A button in a GUI.
  */
-public class GuiButton<TItem> extends GuiLayoutAbstract<TItem> {
+public class GuiButton<TItem> extends GuiLayout<TItem> {
 
     @Override
     public int getWidth() {

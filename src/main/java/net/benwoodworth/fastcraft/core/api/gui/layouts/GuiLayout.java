@@ -1,43 +1,86 @@
 package net.benwoodworth.fastcraft.core.api.gui.layouts;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The layout of a GUI.
  * Layouts are composite, so they're made up of other layouts.
  *
  * @param <TItem> The native item type.
  */
-public class GuiLayout<TItem> extends GuiLayoutAbstract {
+public abstract class GuiLayout<TItem> {
 
-    private int width, height;
-
-    /**
-     * Create a new GuiLayout.
-     *
-     * @param width The width of the layout.
-     * @param height The height of the layout.
-     */
-    public GuiLayout(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
+    @NotNull
+    private List<LayoutCoordinate> innerLayouts = new ArrayList<>();
 
     /**
      * Get the width of this layout.
      *
      * @return Returns the width of this layout.
      */
-    @Override
-    public int getWidth() {
-        return width;
-    }
+    public abstract int getWidth();
 
     /**
      * Get the height of this layout.
      *
      * @return Returns the height of this layout.
      */
-    @Override
-    public int getHeight() {
-        return height;
+    public abstract int getHeight();
+
+    /**
+     * Add an inner layout or button at the specified location.
+     *
+     * @param layout The layout to add.
+     */
+    public final void addLayout(@NotNull GuiLayout<TItem> layout, int x, int y) {
+        innerLayouts.add(new LayoutCoordinate(layout, x, y));
+
+        // Register listeners
+        // TODO
+    }
+
+    /**
+     * Get the layout at a point.
+     *
+     * @param x The x-coordinate within this layout.
+     * @param y The y-coordinate within this layout.
+     * @return Returns the layout at the specified point, and
+     *         the coordinates within that layout that these
+     *         coordinates point to.
+     */
+    @NotNull
+    public final LayoutCoordinate layoutAtPoint(int x, int y) {
+        for (LayoutCoordinate layoutCoord : innerLayouts) {
+            if (x >= layoutCoord.x && y >= layoutCoord.y
+                    && x < layoutCoord.x + layoutCoord.layout.getWidth()
+                    && x < layoutCoord.y + layoutCoord.layout.getHeight()) {
+
+                // If (x, y) is within this inner layout...
+                int newX = x - layoutCoord.layout.getWidth();
+                int newY = y - layoutCoord.layout.getHeight();
+                return layoutCoord.layout.layoutAtPoint(newX, newY);
+            }
+        }
+
+        // No inner layout at point
+        return new LayoutCoordinate(this, x, y);
+    }
+
+    /**
+     * Contains a layout, and a coordinate pair.
+     */
+    public class LayoutCoordinate {
+        @NotNull
+        final GuiLayout<TItem> layout;
+        final int x, y;
+
+        LayoutCoordinate(@NotNull GuiLayout<TItem> layout, int x, int y) {
+            this.layout = layout;
+            this.x = x;
+            this.y = y;
+        }
     }
 }

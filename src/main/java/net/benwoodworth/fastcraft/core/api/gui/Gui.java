@@ -1,13 +1,13 @@
 package net.benwoodworth.fastcraft.core.api.gui;
 
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcInventory;
-import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayoutAbstract;
+import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout;
 
 /**
  * A user interface for
  * @param <TItem>
  */
-public class Gui<TItem> extends GuiLayoutAbstract<TItem> {
+public class Gui<TItem> extends GuiLayout<TItem> {
 
     private GuiApi<TItem> guiApi;
     private FcInventory<TItem> inventory;
