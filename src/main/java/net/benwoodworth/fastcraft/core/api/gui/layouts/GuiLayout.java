@@ -16,6 +16,8 @@ public abstract class GuiLayout<TItem> {
     @NotNull
     private List<LayoutCoordinate> innerLayouts = new ArrayList<>();
 
+
+
     /**
      * Get the width of this layout.
      *
