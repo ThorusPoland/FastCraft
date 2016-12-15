@@ -15,20 +15,20 @@ import org.jetbrains.annotations.NotNull;
 public class FastCraftApi<TItem> {
     private final FcInventoryProvider<TItem> inventoryProvider;
     private final FcPlayerProvider<TItem> playerProvider;
-    private final FcRecipeService<TItem> recipeProvider;
-    private final FcPermissionService permissionRegistry;
+    private final FcRecipeService<TItem> recipeService;
+    private final FcPermissionService permissionService;
 
     private final GuiApi<TItem> guiApi;
 
-    public FastCraftApi(FcInventoryProvider<TItem> inventoryProvider,
-                        FcPlayerProvider<TItem> playerProvider,
-                        FcRecipeService<TItem> recipeProvider,
-                        FcPermissionService permissionRegistry) {
+    public FastCraftApi(@NotNull FcInventoryProvider<TItem> inventoryProvider,
+                        @NotNull FcPlayerProvider<TItem> playerProvider,
+                        @NotNull FcRecipeService<TItem> recipeService,
+                        @NotNull FcPermissionService permissionService) {
 
         this.inventoryProvider = inventoryProvider;
         this.playerProvider = playerProvider;
-        this.recipeProvider = recipeProvider;
-        this.permissionRegistry = permissionRegistry;
+        this.recipeService = recipeService;
+        this.permissionService = permissionService;
 
         guiApi = new GuiApi<>(this);
     }
@@ -44,13 +44,13 @@ public class FastCraftApi<TItem> {
     }
 
     @NotNull
-    public FcRecipeService<TItem> getRecipeProvider() {
-        return recipeProvider;
+    public FcRecipeService<TItem> getRecipeService() {
+        return recipeService;
     }
 
     @NotNull
-    public FcPermissionService getPermissionRegistry() {
-        return permissionRegistry;
+    public FcPermissionService getPermissionService() {
+        return permissionService;
     }
 
     @NotNull
