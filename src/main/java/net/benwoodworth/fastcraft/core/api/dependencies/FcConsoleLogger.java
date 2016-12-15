@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraft.core;
+package net.benwoodworth.fastcraft.core.api.dependencies;
 
 import org.jetbrains.annotations.NotNull;
 
-public interface ConsoleLogger {
+public interface FcConsoleLogger {
 
     /**
      * Log an error to the console.
