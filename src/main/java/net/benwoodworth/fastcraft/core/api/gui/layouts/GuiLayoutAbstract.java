@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.gui;
+package net.benwoodworth.fastcraft.core.api.gui.layouts;
 
 import org.jetbrains.annotations.NotNull;
 

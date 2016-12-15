@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.gui;
+package net.benwoodworth.fastcraft.core.api.gui.events;
 
 import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEvent;
 import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEventCancellable;

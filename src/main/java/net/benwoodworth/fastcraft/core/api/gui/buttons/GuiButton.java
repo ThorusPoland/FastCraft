@@ -1,4 +1,6 @@
-package net.benwoodworth.fastcraft.core.api.gui;
+package net.benwoodworth.fastcraft.core.api.gui.buttons;
+
+import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayoutAbstract;
 
 /**
  * A button in a GUI.

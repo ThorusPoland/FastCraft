@@ -1,9 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.gui;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
+package net.benwoodworth.fastcraft.core.api.gui.layouts;
 
 /**
  * The layout of a GUI.
