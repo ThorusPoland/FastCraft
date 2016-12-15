@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class GuiButton<TItem> extends GuiLayout<TItem> {
 
     @NotNull
-    private final FcEventListener<GuiButtonClickEvent> clickListener = new FcEventListener<>();
+    private final FcEventListener<GuiButtonClickEvent<TItem>> clickListener = new FcEventListener<>();
 
     @Override
     public int getWidth() {
