@@ -14,12 +14,17 @@ import org.jetbrains.annotations.NotNull;
  * @param <TItem> The native item type.
  */
 public class FastCraftApi<TItem> {
+    @NotNull
     private final FcInventoryProvider<TItem> inventoryProvider;
+    @NotNull
     private final FcPlayerProvider<TItem> playerProvider;
+    @NotNull
     private final FcRecipeService<TItem> recipeService;
+    @NotNull
     private final FcPermissionService permissionService;
+    @NotNull
     private final FcConfigProvider configProvider;
-
+    @NotNull
     private final GuiApi<TItem> guiApi;
 
     public FastCraftApi(@NotNull FcInventoryProvider<TItem> inventoryProvider,

@@ -14,7 +14,9 @@ public enum Permission {
 
     ADMIN_RELOAD("fastcraft.admin.reload");
 
+    @NotNull
     private final String permission;
+
     Permission(@NotNull String permission) { // TODO Description, defaults, children, ....
         this.permission = permission;
     }
