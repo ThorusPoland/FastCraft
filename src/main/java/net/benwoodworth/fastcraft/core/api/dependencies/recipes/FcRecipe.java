@@ -16,28 +16,6 @@ import java.util.List;
  */
 public abstract class FcRecipe<TItem> {
 
-    @Nullable
-    private final FcRecipe<TItem> overriddenRecipe;
-
-    /**
-     * Create a new instance of FcRecipe.
-     *
-     * @param overriddenRecipe The recipe overridden by this recipe.
-     */
-    public FcRecipe(@Nullable FcRecipe<TItem> overriddenRecipe) {
-        this.overriddenRecipe = overriddenRecipe;
-    }
-
-    /**
-     * Get the recipe overridden by this recipe.
-     *
-     * @return Returns the overridden recipe, or null if there is none.
-     */
-    @Nullable
-    public FcRecipe<TItem> getOverriddenRecipe() {
-        return overriddenRecipe;
-    }
-
     /**
      * Get the ingredients in this recipe.
      */

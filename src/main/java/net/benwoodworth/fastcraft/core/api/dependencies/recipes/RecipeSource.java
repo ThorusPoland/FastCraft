@@ -15,5 +15,5 @@ public interface RecipeSource<TItem> {
      * Get this recipe source's crafting recipe.
      */
     @NotNull
-    List<FcRecipe<TItem>> getCraftingRecipes();
+    List<FcCustomRecipe<TItem>> getCraftingRecipes();
 }
