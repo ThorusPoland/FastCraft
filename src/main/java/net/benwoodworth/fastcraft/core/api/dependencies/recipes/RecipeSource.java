@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 /**
- * A source of recipes. (Bukkit, Sponge, plugins, etc.)
+ * A source of recipes. (e.g. from plugins that register custom recipes)
  *
  * @param <TItem> The native item type.
  */
