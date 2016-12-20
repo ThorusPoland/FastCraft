@@ -14,7 +14,7 @@ public interface FcInventoryProvider<TItem> {
      * Create a new item.
      */
     @NotNull
-    FcItem<TItem> createItem(@NotNull String type, int amount);
+    FcItemMutable<TItem> createItem(@NotNull String type, int amount);
 
     /**
      * Create a new grid inventory.

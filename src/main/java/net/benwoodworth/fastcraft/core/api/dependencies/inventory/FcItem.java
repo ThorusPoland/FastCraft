@@ -25,6 +25,15 @@ public abstract class FcItem<TBase> {
     }
 
     /**
+     * Construct an immutable FcItem from another FcItem.
+     *
+     * @param item The FcItem this will be based off.
+     */
+    public FcItem(@NotNull FcItem<TBase> item) {
+        this(item.cloneBaseItem());
+    }
+
+    /**
      * Clone the base item being adapted.
      *
      * @return Returns a clone of the base item.
