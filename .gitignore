@@ -1,9 +1,7 @@
 /out/
 /build/
 
-/gradle/
 /.gradle/
-/gradlew*
 
 *.iml
 /.idea/*
