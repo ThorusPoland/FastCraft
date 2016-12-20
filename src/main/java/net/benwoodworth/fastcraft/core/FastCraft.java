@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core;
 
-import net.benwoodworth.fastcraft.core.api.dependencies.FcDependencies;
+import net.benwoodworth.fastcraft.core.api.dependencies.Dependencies;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -9,14 +9,14 @@ import org.jetbrains.annotations.NotNull;
 public class FastCraft {
 
     @NotNull
-    private FcDependencies dependencies;
+    private Dependencies dependencies;
 
     /**
      * Create a new instance of FastCraft.
      *
      * @param dependencies FastCraft dependencies.
      */
-    public FastCraft(@NotNull FcDependencies dependencies) {
+    public FastCraft(@NotNull Dependencies dependencies) {
         this.dependencies = dependencies;
     }
 
@@ -26,7 +26,7 @@ public class FastCraft {
      * @return Returns FastCraft dependencies.
      */
     @NotNull
-    public FcDependencies getDependencies() {
+    public Dependencies getDependencies() {
         return dependencies;
     }
 }

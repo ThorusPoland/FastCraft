@@ -21,8 +21,9 @@ public interface FcInventoryProvider<TItem> {
      *
      * @param height The height of the inventory.
      * @param title The title of the inventory.
+     * @param carrier The carrier of the inventory.
      * @return A chest inventory with the specified height and title.
      */
     @NotNull
-    FcInventory<TItem> createInventory(int height, @Nullable String title);
+    FcInventory<TItem> createInventory(int height, @Nullable String title, @Nullable Object carrier);
 }

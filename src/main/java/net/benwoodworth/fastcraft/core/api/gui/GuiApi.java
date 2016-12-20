@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.gui;
 
-import net.benwoodworth.fastcraft.core.api.dependencies.FcDependencies;
+import net.benwoodworth.fastcraft.core.api.dependencies.Dependencies;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -9,9 +9,9 @@ import org.jetbrains.annotations.NotNull;
 public class GuiApi<TItem> {
 
     @NotNull
-    private final FcDependencies<TItem> dependencies;
+    private final Dependencies<TItem> dependencies;
 
-    public GuiApi(@NotNull FcDependencies<TItem> dependencies) {
+    public GuiApi(@NotNull Dependencies<TItem> dependencies) {
         this.dependencies = dependencies;
     }
 }

@@ -43,6 +43,14 @@ public abstract class FcInventory<TItem> {
     public abstract ItemGrid<FcItem<TItem>> getItemGrid();
 
     /**
+     * Get the carrier of this inventory.
+     *
+     * @return Returns the carrier of this inventory, or null if there is none.
+     */
+    @Nullable
+    public abstract Object getCarrier();
+
+    /**
      * Add items to the inventory.
      *
      * @param items The items to add.
@@ -100,15 +108,23 @@ public abstract class FcInventory<TItem> {
      */
     private boolean contains(@NotNull Collection<FcItem<TItem>> items,
                              @NotNull FcItemComparator<FcItem<TItem>> comparator) {
+        // Keep track of the amount of the items
         int[] amounts = new int[getContents().size()];
         Arrays.setAll(amounts, (int i) -> getContents().get(i).getAmount());
 
+        // Loop through the provided items
         items:for (FcItem<TItem> item : items) {
             int remaining = item.getAmount();
 
+            // Subtract item amount from amounts
             for (int i = 0; i <= getContents().size(); i++) {
-                if (i == getContents().size()) return false;
-                if (!comparator.compare(item, getContents().get(i))) continue;
+                // If looped through all, and haven't removed enough
+                if (i == getContents().size())
+                    return false;
+
+                // If items don't match
+                if (!comparator.compare(item, getContents().get(i)))
+                    continue;
 
                 if (amounts[i] < remaining) {
                     remaining -= amounts[i];
@@ -120,6 +136,7 @@ public abstract class FcInventory<TItem> {
             }
         }
 
+        // Was able to remove all items
         return true;
     }
 

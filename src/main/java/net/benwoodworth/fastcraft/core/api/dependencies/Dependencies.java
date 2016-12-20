@@ -5,7 +5,6 @@ import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcInventoryPro
 import net.benwoodworth.fastcraft.core.api.dependencies.permissions.FcPermissionService;
 import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayerProvider;
 import net.benwoodworth.fastcraft.core.api.dependencies.recipes.FcRecipeService;
-import net.benwoodworth.fastcraft.core.api.gui.GuiApi;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -13,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @param <TItem> The native item type.
  */
-public class FcDependencies<TItem> {
+public class Dependencies<TItem> {
     @NotNull
     private final FcInventoryProvider<TItem> inventoryProvider;
     @NotNull
@@ -24,18 +23,22 @@ public class FcDependencies<TItem> {
     private final FcPermissionService permissionService;
     @NotNull
     private final FcConfigProvider configProvider;
+    @NotNull
+    private final FcTaskScheduler taskScheduler;
 
-    public FcDependencies(@NotNull FcInventoryProvider<TItem> inventoryProvider,
-                          @NotNull FcPlayerProvider<TItem> playerProvider,
-                          @NotNull FcRecipeService<TItem> recipeService,
-                          @NotNull FcPermissionService permissionService,
-                          @NotNull FcConfigProvider configProvider) {
+    public Dependencies(@NotNull FcInventoryProvider<TItem> inventoryProvider,
+                        @NotNull FcPlayerProvider<TItem> playerProvider,
+                        @NotNull FcRecipeService<TItem> recipeService,
+                        @NotNull FcPermissionService permissionService,
+                        @NotNull FcConfigProvider configProvider,
+                        @NotNull FcTaskScheduler taskScheduler) {
 
         this.inventoryProvider = inventoryProvider;
         this.playerProvider = playerProvider;
         this.recipeService = recipeService;
         this.permissionService = permissionService;
         this.configProvider = configProvider;
+        this.taskScheduler = taskScheduler;
     }
 
     @NotNull
@@ -61,5 +64,10 @@ public class FcDependencies<TItem> {
     @NotNull
     public FcConfigProvider getConfigProvider() {
         return configProvider;
+    }
+
+    @NotNull
+    public FcTaskScheduler getTaskScheduler() {
+        return taskScheduler;
     }
 }

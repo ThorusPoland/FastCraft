@@ -1,7 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.dependencies.event.events;
 
-import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEventCancellable;
-import net.benwoodworth.fastcraft.core.api.dependencies.event.FcEventWrapper;
+import net.benwoodworth.fastcraft.core.api.dependencies.event.Cancellable;
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcItem;
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.ItemGrid;
 import org.jetbrains.annotations.NotNull;
@@ -14,7 +13,7 @@ import java.util.List;
  * @param <TBase> The base of this event.
  * @param <TItem> The native item used in this event.
  */
-public interface FcCraftEvent<TBase, TItem> extends FcEventCancellable, FcEventWrapper<TBase> {
+public interface FcCraftEvent<TBase, TItem> extends Cancellable {
 
     /**
      * Get the matrix that was used to craft an item.

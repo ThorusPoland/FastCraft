@@ -3,17 +3,20 @@ package net.benwoodworth.fastcraft.core.api.dependencies.event;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 /**
  * Listens to events, and notifies event handlers when events occur.
+ *
+ * @param <TEvent> The type of event being listened for.
  */
-public class FcEventListener<TEvent extends FcEvent> {
+public class EventListener<TEvent> {
 
     /**
      * This listener's event handlers.
      */
     @NotNull
-    private ArrayList<FcEventHandler<TEvent>> handlers = new ArrayList<>();
+    private ArrayList<Consumer<TEvent>> handlers = new ArrayList<>();
 
     /**
      * Raise an event.
@@ -21,7 +24,7 @@ public class FcEventListener<TEvent extends FcEvent> {
      * @param event The event to handle.
      */
     public void notifyHandlers(@NotNull TEvent event) {
-        handlers.forEach(handler -> handler.handleEvent(event));
+        handlers.forEach(handler -> handler.accept(event));
     }
 
     /**
@@ -29,7 +32,7 @@ public class FcEventListener<TEvent extends FcEvent> {
      *
      * @param handler The event handler to add to this event.
      */
-    public void addHandler(@NotNull FcEventHandler<TEvent> handler) {
+    public void addHandler(@NotNull Consumer<TEvent> handler) {
         handlers.add(handler);
     }
 
@@ -38,7 +41,7 @@ public class FcEventListener<TEvent extends FcEvent> {
      *
      * @param handler The event handler to remove from this listener.
      */
-    public void removeHandler(@NotNull FcEventHandler<TEvent> handler) {
+    public void removeHandler(@NotNull Consumer<TEvent> handler) {
         handlers.remove(handler);
     }
 }
