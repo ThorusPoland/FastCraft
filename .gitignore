@@ -5,7 +5,6 @@
 /.gradle/
 /gradlew*
 
-
 *.iml
 /.idea/*
 !/.idea/inspectionProfiles/
