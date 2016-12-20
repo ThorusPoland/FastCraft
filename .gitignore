@@ -1,13 +1,17 @@
-out/
-build/
+/out/
+/build/
 
-.gradle/
+/gradle/
+/.gradle/
+/gradlew*
 
-.idea/*
-!.idea/inspectionProfiles/
-!.idea/modules/
-!.idea/.name
-!.idea/compiler.xml
-!.idea/encodings.xml
-!.idea/gradle.xml
-!.idea/modules.xml
+
+*.iml
+/.idea/*
+!/.idea/inspectionProfiles/
+!/.idea/modules/
+!/.idea/.name
+!/.idea/compiler.xml
+!/.idea/encodings.xml
+!/.idea/gradle.xml
+!/.idea/modules.xml
