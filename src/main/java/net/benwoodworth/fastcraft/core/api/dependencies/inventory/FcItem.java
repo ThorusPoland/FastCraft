@@ -6,16 +6,31 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 /**
- * A Minecraft item.
+ * An immutable Minecraft item.
  *
- * @param <TBase> The item type from the native server platform.
+ * @param <TBase> The native item type.
  */
 public abstract class FcItem<TBase> {
+
+    @NotNull
+    private final TBase baseItem;
+
     /**
-     * The base item being adapted.
+     * Create a new immutable FcItem.
+     *
+     * @param baseItem The base item, which will not be modified externally.
+     */
+    protected FcItem(@NotNull TBase baseItem) {
+        this.baseItem = baseItem;
+    }
+
+    /**
+     * Clone the base item being adapted.
+     *
+     * @return Returns a clone of the base item.
      */
     @NotNull
-    public abstract TBase getBase();
+    public abstract TBase cloneBaseItem();
 
     /**
      * Get the Minecraft item type ID.
@@ -24,23 +39,9 @@ public abstract class FcItem<TBase> {
     public abstract String getTypeId();
 
     /**
-     * Set the Minecraft item type ID.
-     *
-     * @param typeId The type ID to set.
-     */
-    public abstract void setTypeId(@NotNull String typeId);
-
-    /**
      * Get the amount of items in this stack.
      */
     public abstract int getAmount();
-
-    /**
-     * Set the amount of items in this stack.
-     *
-     * @param amount The amount of items.
-     */
-    public abstract void setAmount(int amount);
 
     /**
      * Get the display name of this item.
@@ -49,26 +50,12 @@ public abstract class FcItem<TBase> {
     public abstract String getDisplayName();
 
     /**
-     * Set the display name of this item.
-     *
-     * @param displayName The display name.
-     */
-    public abstract void setDisplayName(@Nullable String displayName);
-
-    /**
      * Get a copy of this item's lore.
      *
      * @return Returns a lore.
      */
     @NotNull
     public abstract List<String> getLore();
-
-    /**
-     * Set this item's lore.
-     *
-     * @param lore The lore to set.
-     */
-    public abstract void setLore(@NotNull List<String> lore);
 
     /**
      * Get the maximum size of this stack.
@@ -83,14 +70,6 @@ public abstract class FcItem<TBase> {
      * @return Returns true if the item has wild card data.
      */
     public abstract boolean hasWildCardData();
-
-    /**
-     * Add an enchantment to the item.
-     *
-     * @param enchantmentId The Minecraft enchantment ID.
-     * @param level The enchantment level.
-     */
-    public abstract void addEnchantment(@NotNull String enchantmentId, int level);
 
     /**
      * Compare equality of this base item to another, ignoring amount.
