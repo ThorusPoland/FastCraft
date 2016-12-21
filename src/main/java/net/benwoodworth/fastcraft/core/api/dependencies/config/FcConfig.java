@@ -7,34 +7,38 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Reads and stores config values.
+ * Reads and stores values in a configuration.
  */
 abstract class FcConfig extends FcConfigSection {
 
     /**
      * Load a config from a file.
+     *
+     * @param file the {@link File} to load
+     * @throws IOException if there was a problem loading the config
      */
     public abstract void load(@NotNull File file) throws IOException;
 
     /**
-     * Save this config to a file.
+     * Save this {@link FcConfig} to a file.
      *
-     * @param file The file to save this config to.
+     * @param file the {@link File} to save to
+     * @throws IOException if there was a problem saving the config
      */
     public abstract void save(@NotNull File file) throws IOException;
 
     /**
-     * Get the config's header comment.
+     * Get the header comment.
      *
-     * @return Returns the config's header.
+     * @return the header comment
      */
     @Nullable
     public abstract String getConfigHeader();
 
     /**
-     * Set the config's header comment.
+     * Set the header comment.
      *
-     * @param header The new config header.
+     * @param header the new header comment
      */
     public abstract void setConfigHeader(@Nullable String header);
 }

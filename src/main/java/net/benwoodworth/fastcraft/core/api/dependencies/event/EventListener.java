@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 /**
  * Listens to events, and notifies event handlers when events occur.
  *
- * @param <TEvent> The type of event being listened for.
+ * @param <TEvent> the type of event being listened for
  */
 public class EventListener<TEvent> {
 
@@ -21,7 +21,7 @@ public class EventListener<TEvent> {
     /**
      * Raise an event.
      *
-     * @param event The event to handle.
+     * @param event the event to handle
      */
     public void notifyHandlers(@NotNull TEvent event) {
         handlers.forEach(handler -> handler.accept(event));
@@ -30,7 +30,7 @@ public class EventListener<TEvent> {
     /**
      * Add an event handler to this listener.
      *
-     * @param handler The event handler to add to this event.
+     * @param handler the event handler to add to this event
      */
     public void addHandler(@NotNull Consumer<TEvent> handler) {
         handlers.add(handler);
@@ -39,7 +39,7 @@ public class EventListener<TEvent> {
     /**
      * Remove an event handler from this listener.
      *
-     * @param handler The event handler to remove from this listener.
+     * @param handler the event handler to remove from this listener
      */
     public void removeHandler(@NotNull Consumer<TEvent> handler) {
         handlers.remove(handler);

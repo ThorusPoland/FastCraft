@@ -10,7 +10,7 @@ public interface FcConfigProvider {
     /**
      * Create a new empty config.
      *
-     * @return Returns a new empty config.
+     * @return a new empty config
      */
     @NotNull
     FcConfig createEmptyConfig();

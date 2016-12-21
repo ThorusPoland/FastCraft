@@ -12,24 +12,30 @@ import java.util.List;
 /**
  * Adapts a recipe from the native implementation.
  *
- * @param <TItem> The native item type used in this recipe.
+ * @param <TItem> the native item type used in this recipe
  */
 public abstract class FcRecipe<TItem> {
 
     /**
-     * Get the ingredients in this recipe.
+     * Get the ingredients in the recipe.
+     *
+     * @return the ingredients in the recipe
      */
     @NotNull
     public abstract List<FcItem<TItem>> getIngredients();
 
     /**
-     * Get the results of this recipe.
+     * Get the results of the recipe.
+     *
+     * @return the results of the recipe
      */
     @NotNull
     public abstract List<FcItem<TItem>> getResults();
 
     /**
-     * Get the permissions required to craft this recipe.
+     * Get the permissions required to craft the recipe.
+     *
+     * @return the permissions required to craft the recipe
      */
     @NotNull
     public abstract List<Permission> getPermissions();
@@ -37,7 +43,8 @@ public abstract class FcRecipe<TItem> {
     /**
      * Simulate the crafting of this item with this recipe.
      *
-     * @return Returns the resulting crafting event.
+     * @param player the {@link FcPlayer} crafting the recipe
+     * @return the resulting crafting event
      */
     @NotNull
     public abstract FcCraftEvent<?, TItem> simulateCraft(@NotNull FcPlayer<TItem> player);
@@ -45,14 +52,15 @@ public abstract class FcRecipe<TItem> {
     /**
      * Checks if this recipe is equal to another.
      *
-     * @return Returns true if the recipe are equal.
+     * @param recipe the {@link FcRecipe} to compare to
+     * @return {@code true} if the recipe are equal
      */
     public abstract boolean equals(@NotNull FcRecipe<TItem> recipe);
 
     /**
      * Checks if this recipe is equal to an object.
      *
-     * @return Always returns false.
+     * @return {@code false}
      */
     @Override
     public final boolean equals(@Nullable Object other) {
@@ -61,6 +69,8 @@ public abstract class FcRecipe<TItem> {
 
     /**
      * Generates a hash code for this recipe.
+     *
+     * @return the hash code
      */
     @Override
     public final int hashCode() {

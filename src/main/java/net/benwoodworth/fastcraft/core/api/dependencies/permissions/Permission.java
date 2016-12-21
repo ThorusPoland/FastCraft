@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.api.dependencies.permissions;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Plugin permission.
+ * A plugin permission.
  */
 public enum Permission {
     USE("fastcraft.use"),
@@ -17,14 +17,19 @@ public enum Permission {
     @NotNull
     private final String permission;
 
+    /**
+     * Create a new permission.
+     *
+     * @param permission the permission {@link String}
+     */
     Permission(@NotNull String permission) { // TODO Description, defaults, children, ....
         this.permission = permission;
     }
 
     /**
-     * Get this permission's permission string.
+     * Get this permission's permission {@link String}.
      *
-     * @return Returns the permission string.
+     * @return the permission {@link String}
      */
     @NotNull
     public String getPermissionString() {

@@ -7,12 +7,14 @@ import java.util.List;
 /**
  * A source of recipes. (e.g. from plugins that register custom recipes)
  *
- * @param <TItem> The native item type.
+ * @param <TItem> the native item type
  */
 public interface RecipeSource<TItem> {
 
     /**
-     * Get this recipe source's crafting recipe.
+     * Get this recipe source's crafting recipes.
+     *
+     * @return the crafting recipes
      */
     @NotNull
     List<FcCustomRecipe<TItem>> getCraftingRecipes();

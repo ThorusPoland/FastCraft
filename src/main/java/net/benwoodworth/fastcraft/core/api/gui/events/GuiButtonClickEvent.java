@@ -7,9 +7,9 @@ import net.benwoodworth.fastcraft.core.api.gui.buttons.GuiButton;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * A click event for GUI buttons.
+ * An event triggered when a {@link GuiButton} is clicked.
  *
- * @param <TItem> The native item type.
+ * @param <TItem> the native item type
  */
 public class GuiButtonClickEvent<TItem> implements Cancellable {
 
@@ -23,11 +23,11 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     private boolean cancelled = false;
 
     /**
-     * Construct a new GuiButtonClickEvent.
+     * Construct a new {@link GuiButtonClickEvent}.
      *
-     * @param gui The GUI in which the button was pressed.
-     * @param button The button that was pressed.
-     * @param player The player who pressed the button.
+     * @param gui The {@link Gui} in which the button was pressed
+     * @param button The {@link GuiButton} that was pressed
+     * @param player The {@link FcPlayer} who pressed the button
      */
     public GuiButtonClickEvent(@NotNull Gui<TItem> gui,
                                @NotNull GuiButton<TItem> button,
@@ -38,9 +38,9 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     }
 
     /**
-     * Get the GUI in which the button was pressed.
+     * Get the {@link Gui} in which the button was pressed.
      *
-     * @return Returns the GUI.
+     * @return the {@link Gui} in which the button was pressed
      */
     @NotNull
     public Gui<TItem> getGui() {
@@ -48,9 +48,9 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     }
 
     /**
-     * Get the button that was pressed.
+     * Get the {@link GuiButton} that was pressed.
      *
-     * @return Returns the button.
+     * @return the button
      */
     @NotNull
     public GuiButton<TItem> getButton() {

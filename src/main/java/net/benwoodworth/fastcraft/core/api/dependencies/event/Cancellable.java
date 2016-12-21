@@ -8,14 +8,14 @@ public interface Cancellable {
     /**
      * Get the cancelled state of this event.
      *
-     * @return Returns true if this event is cancelled.
+     * @return true if this event is cancelled
      */
     boolean isCancelled();
 
     /**
      * Set the cancelled state of this event.
      *
-     * @param cancelled The new cancelled state.
+     * @param cancelled the new cancelled state
      */
     void setCancelled(boolean cancelled);
 }

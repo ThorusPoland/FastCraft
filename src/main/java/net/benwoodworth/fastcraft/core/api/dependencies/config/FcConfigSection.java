@@ -5,15 +5,15 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 /**
- * A config section.
+ * A section of a config, providing access to keys/values, and other sub-sections.
  */
 public abstract class FcConfigSection {
 
     /**
      * Get a config section.
      *
-     * @param name The section name.
-     * @return Returns the section with the given name, or null if it doesn't exist.
+     * @param name the section name
+     * @return the section with the given name, or {@code null} if it doesn't exist
      */
     @Nullable
     public abstract FcConfigSection getSection(@NotNull String name);
@@ -21,8 +21,8 @@ public abstract class FcConfigSection {
     /**
      * Create a new config section.
      *
-     * @param name The name of the new section.
-     * @return Returns the new config section.
+     * @param name the name of the new section
+     * @return the new config section
      */
     @NotNull
     public abstract FcConfigSection createSection(@NotNull String name);
@@ -30,18 +30,18 @@ public abstract class FcConfigSection {
     /**
      * Set a value at a given key.
      *
-     * @param key The key.
-     * @param value The value to set.
-     * @param <T> The value type.
+     * @param key   the key
+     * @param value the value to set
+     * @param <T>   the value type
      */
     public abstract <T> void setValue(@NotNull String key, @Nullable T value);
 
     /**
-     * Get a value given a key.
+     * Get a value, given a key.
      *
-     * @param key The key.
-     * @param <T> The value type.
-     * @return Returns the value.
+     * @param key the key
+     * @param <T> the value type
+     * @return the value at the given key, or null if the key does not exist
      */
     @Nullable
     public abstract <T> T getValue(@NotNull String key);
@@ -49,10 +49,10 @@ public abstract class FcConfigSection {
     /**
      * Get a value given a key.
      *
-     * @param key The key.
-     * @param defaultValue The value to return if the actual value is null.
-     * @param <T> The value type.
-     * @return Returns the value, or defaultValue if null.
+     * @param key          the key
+     * @param defaultValue the value to return if the actual value is {@code null}
+     * @param <T>          the value type
+     * @return the value, or {@code defaultValue} if {@code null}
      */
     @NotNull
     public <T> T getValue(@NotNull String key, @NotNull T defaultValue) {

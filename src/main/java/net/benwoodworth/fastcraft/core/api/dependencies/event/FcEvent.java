@@ -5,12 +5,14 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Adapts an event from a native implementation.
  *
- * @param <TBase> The base event being adapted.
+ * @param <TBase> the base event being adapted
  */
 public interface FcEvent<TBase> {
 
     /**
      * The base of this event.
+     *
+     * @return the base of this event
      */
     @NotNull
     TBase getBaseEvent();

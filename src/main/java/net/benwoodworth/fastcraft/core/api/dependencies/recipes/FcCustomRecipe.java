@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * A custom recipe that adds extra functionality to a base recipe.
  *
- * @param <TItem> The native item type.
+ * @param <TItem> the native item type
  */
 public abstract class FcCustomRecipe<TItem> extends FcRecipe<TItem> {
 
@@ -15,7 +15,7 @@ public abstract class FcCustomRecipe<TItem> extends FcRecipe<TItem> {
     /**
      * Create a new instance of FcRecipe.
      *
-     * @param baseRecipe The base recipe, overridden by this recipe.
+     * @param baseRecipe the base recipe, overridden by this recipe
      */
     public FcCustomRecipe(@NotNull FcRecipe<TItem> baseRecipe) {
         this.baseRecipe = baseRecipe;
@@ -24,7 +24,7 @@ public abstract class FcCustomRecipe<TItem> extends FcRecipe<TItem> {
     /**
      * Get the base recipe, overridden by this recipe.
      *
-     * @return Returns the base recipe, or null if there is none.
+     * @return the base recipe, or null if there is none
      */
     @NotNull
     public FcRecipe<TItem> getOverriddenRecipe() {
