@@ -25,9 +25,9 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     /**
      * Construct a new {@link GuiButtonClickEvent}.
      *
-     * @param gui The {@link Gui} in which the button was pressed
-     * @param button The {@link GuiButton} that was pressed
-     * @param player The {@link FcPlayer} who pressed the button
+     * @param gui the {@link Gui} in which the button was clicked
+     * @param button the {@link GuiButton} that was clicked
+     * @param player the {@link FcPlayer} who clicked the button
      */
     public GuiButtonClickEvent(@NotNull Gui<TItem> gui,
                                @NotNull GuiButton<TItem> button,
@@ -38,9 +38,9 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     }
 
     /**
-     * Get the {@link Gui} in which the button was pressed.
+     * Get the {@link Gui} in which the button was clicked.
      *
-     * @return the {@link Gui} in which the button was pressed
+     * @return the {@link Gui} in which the button was clicked
      */
     @NotNull
     public Gui<TItem> getGui() {
@@ -48,7 +48,7 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     }
 
     /**
-     * Get the {@link GuiButton} that was pressed.
+     * Get the {@link GuiButton} that was clicked.
      *
      * @return the button
      */
@@ -58,9 +58,9 @@ public class GuiButtonClickEvent<TItem> implements Cancellable {
     }
 
     /**
-     * Get the player who pressed the button.
+     * Get the player who clicked the button.
      *
-     * @return Returns the player.
+     * @return the player who clicked the button
      */
     @NotNull
     public FcPlayer<TItem> getPlayer() {

@@ -16,26 +16,24 @@ public abstract class GuiLayout<TItem> {
     @NotNull
     private List<LayoutCoordinate> innerLayouts = new ArrayList<>();
 
-
-
     /**
-     * Get the width of this layout.
+     * Get the width of this {@link GuiLayout}.
      *
-     * @return Returns the width of this layout.
+     * @return the width of this {@link GuiLayout}
      */
     public abstract int getWidth();
 
     /**
-     * Get the height of this layout.
+     * Get the height of this {@link GuiLayout}.
      *
-     * @return Returns the height of this layout.
+     * @return the height of this {@link GuiLayout}
      */
     public abstract int getHeight();
 
     /**
      * Add an inner layout or button at the specified location.
      *
-     * @param layout The layout to add.
+     * @param layout the layout to add
      */
     public final void addLayout(@NotNull GuiLayout<TItem> layout, int x, int y) {
         innerLayouts.add(new LayoutCoordinate(layout, x, y));
@@ -47,11 +45,10 @@ public abstract class GuiLayout<TItem> {
     /**
      * Get the layout at a point.
      *
-     * @param x The x-coordinate within this layout.
-     * @param y The y-coordinate within this layout.
-     * @return Returns the layout at the specified point, and
-     *         the coordinates within that layout that these
-     *         coordinates point to.
+     * @param x the x-coordinate within this layout
+     * @param y the y-coordinate within this layout
+     * @return the layout at the specified point, and the coordinates
+     *         within that layout that these coordinates point to
      */
     @NotNull
     public final LayoutCoordinate layoutAtPoint(int x, int y) {

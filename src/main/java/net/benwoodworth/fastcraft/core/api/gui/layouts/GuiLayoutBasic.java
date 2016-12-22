@@ -4,7 +4,7 @@ package net.benwoodworth.fastcraft.core.api.gui.layouts;
  * The layout of a GUI.
  * Layouts are composite, so they're made up of other layouts.
  *
- * @param <TItem> The native item type.
+ * @param <TItem> the native item type
  */
 public class GuiLayoutBasic<TItem> extends GuiLayout {
 
@@ -13,8 +13,8 @@ public class GuiLayoutBasic<TItem> extends GuiLayout {
     /**
      * Create a new GuiLayout.
      *
-     * @param width The width of the layout.
-     * @param height The height of the layout.
+     * @param width the width of the layout
+     * @param height the height of the layout
      */
     public GuiLayoutBasic(int width, int height) {
         this.width = width;
@@ -24,7 +24,7 @@ public class GuiLayoutBasic<TItem> extends GuiLayout {
     /**
      * Get the width of this layout.
      *
-     * @return Returns the width of this layout.
+     * @return the width of this layout
      */
     @Override
     public int getWidth() {
@@ -34,7 +34,7 @@ public class GuiLayoutBasic<TItem> extends GuiLayout {
     /**
      * Get the height of this layout.
      *
-     * @return Returns the height of this layout.
+     * @return the height of this layout
      */
     @Override
     public int getHeight() {

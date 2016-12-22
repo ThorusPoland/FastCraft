@@ -14,7 +14,7 @@ public class FastCraft {
     /**
      * Create a new instance of FastCraft.
      *
-     * @param dependencies FastCraft dependencies.
+     * @param dependencies FastCraft dependencies
      */
     public FastCraft(@NotNull Dependencies dependencies) {
         this.dependencies = dependencies;
@@ -23,7 +23,7 @@ public class FastCraft {
     /**
      * Get the FastCraft dependencies.
      *
-     * @return Returns FastCraft dependencies.
+     * @return FastCraft dependencies
      */
     @NotNull
     public Dependencies getDependencies() {

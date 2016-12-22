@@ -15,8 +15,8 @@ public class Gui<TItem> extends GuiLayout<TItem> {
     /**
      * Create a new GUI.
      *
-     * @param guiApi The GUI API.
-     * @param inventory The inventory representing this GUI.
+     * @param guiApi The {@link GuiApi}.
+     * @param inventory the containing inventory
      */
     public Gui(GuiApi<TItem> guiApi, FcInventory<TItem> inventory) {
         this.guiApi = guiApi;

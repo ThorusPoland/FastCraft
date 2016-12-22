@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * A button in a GUI.
+ *
+ * @param <TItem> the native item type
  */
 public class GuiButton<TItem> extends GuiLayout<TItem> {
 
@@ -26,7 +28,7 @@ public class GuiButton<TItem> extends GuiLayout<TItem> {
     /**
      * Get this button's click listener.
      *
-     * @return Returns this button's click listener.
+     * @return the button's click listener
      */
     @NotNull
     public final EventListener<GuiButtonClickEvent<TItem>> getClickListener() {
