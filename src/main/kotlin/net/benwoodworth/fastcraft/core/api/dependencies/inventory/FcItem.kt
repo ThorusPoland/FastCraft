@@ -1,68 +1,50 @@
 package net.benwoodworth.fastcraft.core.api.dependencies.inventory
 
 /**
- * An immutable Minecraft item.
+ * A Minecraft item.
  *
  * @param TBase the native item type
  */
-abstract class FcItem<TBase>(
-        /** The base item */
-        open protected val baseItem: TBase
-) {
+interface FcItem<TBase> {
 
     /** The Minecraft item type ID. */
-    abstract var typeId: String
+    val typeId: String
 
     /** The amount of items in this stack. */
-    abstract var amount: Int
+    val amount: Int
 
     /** The display name of this item. */
-    abstract var displayName: String?
+    val displayName: String?
 
     /** The maximum size of this stack. */
-    abstract val maxStackSize: Int
+    val maxStackSize: Int
 
     /**
-     * Construct an immutable FcItem from another FcItem.
+     * Get a mutable copy of this item.
      *
-     * @param item the FcItem this will be based off
+     * @return a mutable copy
      */
-    constructor(item: FcItem<TBase>) : this(item.cloneBaseItem())
+    fun getMutableItem(): FcItemMutable<TBase>
 
     /**
      * Clone the base item being adapted.
      *
      * @return a clone of the base item
      */
-    abstract fun cloneBaseItem(): TBase
+    fun cloneBaseItem(): TBase
 
     /**
      * Get the item's lore.
      *
      * @return the item's lore
      */
-    abstract fun getLore(): List<String?>
-
-    /**
-     * Set the item's lore.
-     *
-     * @param lore the item's lore
-     */
-    abstract fun setLore(lore: List<String?>)
-
-    /**
-     * Add an enchantment to the item.
-     *
-     * @param enchantmentId the Minecraft enchantment ID
-     * @param level the enchantment level
-     */
-    abstract fun addEnchantment(enchantmentId: String, level: Int)
+    fun getLore(): List<String?>
 
     /**
      * Whether this item, as an ingredient, matches any
      * item of the same type, regardless of data.
      */
-    abstract val hasWildCardData: Boolean
+    val hasWildCardData: Boolean
 
     /**
      * Compare equality of this base item to another, ignoring amount.
@@ -70,7 +52,7 @@ abstract class FcItem<TBase>(
      * @param item the [FcItem] to compare to
      * @return `true` if the items are similar
      */
-    abstract fun isSimilar(item: FcItem<TBase>): Boolean
+    fun isSimilar(item: FcItem<TBase>): Boolean
 
     /**
      * Checks if this item can be used as an ingredient in a recipe.
@@ -79,21 +61,7 @@ abstract class FcItem<TBase>(
      * @param ingredient the ingredient of a recipe
      * @return `true` if this item can be used as the ingredient
      */
-    abstract fun matchesIngredient(ingredient: FcItem<TBase>): Boolean
-
-    /**
-     * A hash code for this item.
-     *
-     * @return the item's hash code
-     */
-    abstract override fun hashCode(): Int
-
-    /**
-     * Compare equality to an object that isn't an FcItem<T>.
-     *
-     * @return `false`
-     */
-    final override fun equals(other: Any?) = false
+    fun matchesIngredient(ingredient: FcItem<TBase>): Boolean
 
     /**
      * Checks if the items are similar, and have the same amount.
@@ -103,4 +71,13 @@ abstract class FcItem<TBase>(
     fun equals(other: FcItem<TBase>): Boolean {
         return amount == other.amount && isSimilar(other)
     }
+
+    /**
+     * A hash code for this item.
+     *
+     * The hash code should remain the same between starts.
+     *
+     * @return the item's hash code
+     */
+    override fun hashCode(): Int
 }

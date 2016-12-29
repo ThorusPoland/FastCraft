@@ -104,7 +104,7 @@ abstract class FcInventory<TItem> {
             var remaining = item.amount
 
             // Subtract item amount from amounts
-            for (i in 0..(contents.size + 1)) {
+            for (i in 0..contents.size) {
                 // If looped through all, and haven't removed enough
                 if (i == contents.size)
                     return false
