@@ -10,7 +10,7 @@ import java.util.*
 class EventListener<TEvent> {
 
     /** This listener's event handlers. */
-    private val handlers = ArrayList<(event: TEvent) -> Unit>() // TODO Use Kotlin list
+    private val handlers = HashSet<(event: TEvent) -> Unit>()
 
     /**
      * Raise an event.
@@ -27,7 +27,7 @@ class EventListener<TEvent> {
      * @param handler the event handler to add to this event
      */
     fun addHandler(handler: (event: TEvent) -> Unit) {
-        handlers.add(handler)
+        handlers += handler
     }
 
     /**
@@ -36,6 +36,6 @@ class EventListener<TEvent> {
      * @param handler the event handler to remove from this listener
      */
     fun removeHandler(handler: (event: TEvent) -> Unit) {
-        handlers.remove(handler)
+        handlers -= handler
     }
 }

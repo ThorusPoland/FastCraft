@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.dependencies.recipes
 
-import net.benwoodworth.fastcraft.core.api.dependencies.event.events.FcCraftEvent
+import net.benwoodworth.fastcraft.core.api.dependencies.event.events.FcItemCraftEvent
 import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcItem
 import net.benwoodworth.fastcraft.core.api.dependencies.permissions.Permission
 import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayer
@@ -27,7 +27,7 @@ abstract class FcRecipe<TItem> {
      * @param player the [FcPlayer] crafting the recipe
      * @return the resulting crafting event
      */
-    abstract fun simulateCraft(player: FcPlayer<TItem>): FcCraftEvent<*, TItem>
+    abstract fun simulateCraft(player: FcPlayer<TItem>): FcItemCraftEvent<TItem>
 
     /**
      * Check if this recipe is equal to another.
