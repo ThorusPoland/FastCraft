@@ -6,7 +6,7 @@ import java.io.IOException
 /**
  * Reads and stores values in a configuration.
  */
-abstract class FcConfig : FcConfigSection() {
+interface FcConfig : FcConfigSection {
 
     /**
      * Load a config from a file.
@@ -14,7 +14,7 @@ abstract class FcConfig : FcConfigSection() {
      * @param file the [File] to load
      * @throws IOException if there was a problem loading the config
      */
-    abstract fun load(file: File)
+    fun load(file: File)
 
     /**
      * Save this [FcConfig] to a file.
@@ -22,19 +22,19 @@ abstract class FcConfig : FcConfigSection() {
      * @param file the [File] to save to
      * @throws IOException if there was a problem saving the config
      */
-    abstract fun save(file: File)
+    fun save(file: File)
 
     /**
      * Get the header comment.
      *
      * @return the header comment
      */
-    abstract fun getConfigHeader(): String?
+    fun getConfigHeader(): String?
 
     /**
      * Set the header comment.
      *
      * @param header the new header comment
      */
-    abstract fun setConfigHeader(header: String?)
+    fun setConfigHeader(header: String?)
 }

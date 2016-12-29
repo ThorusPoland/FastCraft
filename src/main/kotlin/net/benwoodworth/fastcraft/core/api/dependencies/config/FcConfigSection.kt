@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.api.dependencies.config
 /**
  * A section of a config, providing access to keys/values, and other sub-sections.
  */
-abstract class FcConfigSection {
+interface FcConfigSection {
 
     /**
      * Get a config section.
@@ -11,7 +11,7 @@ abstract class FcConfigSection {
      * @param name the section name
      * @return the section with the given name, or `null` if it doesn't exist
      */
-    abstract fun getSection(name: String): FcConfigSection?
+    fun getSection(name: String): FcConfigSection?
 
     /**
      * Create a new config section.
@@ -19,7 +19,7 @@ abstract class FcConfigSection {
      * @param name the name of the new section
      * @return the new config section
      */
-    abstract fun createSection(name: String): FcConfigSection
+    fun createSection(name: String): FcConfigSection
 
     /**
      * Set a value at a given key.
@@ -28,7 +28,7 @@ abstract class FcConfigSection {
      * @param value the value to set
      * @param T   the value type
      */
-    abstract fun <T> setValue(key: String, value: T?)
+    fun <T> setValue(key: String, value: T?)
 
     /**
      * Get a value, given a key.
@@ -37,17 +37,5 @@ abstract class FcConfigSection {
      * @param T the value type
      * @return the value at the given key, or null if the key does not exist
      */
-    abstract fun <T> getValue(key: String): T?
-
-    /**
-     * Get a value given a key.
-     *
-     * @param key          the key
-     * @param defaultValue the value to return if the actual value is `null`
-     * @param T          the value type
-     * @return the value, or `defaultValue} if {@code null`
-     */
-    fun <T> getValue(key: String, defaultValue: T): T {
-        return getValue(key) ?: defaultValue
-    }
+    fun <T> getValue(key: String): T?
 }
