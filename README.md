@@ -1,4 +1,9 @@
-#FastCraft+ [![Build Status](https://travis-ci.org/BenWoodworth/FastCraftPlus.svg?branch=master)](https://travis-ci.org/BenWoodworth/FastCraftPlus)
+#FastCraft+
+[![Build Status](https://travis-ci.org/BenWoodworth/FastCraft.svg)](https://travis-ci.org/BenWoodworth/FastCraft)
+[![Downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)](https://github.com/BenWoodworth/FastCraft/releases)
+
+FastCraft+ is a Minecraft
+[Bukkit](http://dev.bukkit.org/) plugin that changes the way players craft in-game items.
 
 ##Setup
 - Add this plugin's _FastCraftPlus.jar_ file to your server's _plugins_ directory.
