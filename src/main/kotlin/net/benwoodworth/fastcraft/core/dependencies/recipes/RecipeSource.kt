@@ -12,5 +12,5 @@ interface RecipeSource<TItem> {
      *
      * @return the crafting recipes
      */
-    fun getCraftingRecipes(): List<FcCustomRecipe<TItem>>
+    fun getCraftingRecipes(): List<FcModifiedRecipe<TItem>>
 }

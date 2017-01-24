@@ -10,16 +10,21 @@ import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
  *
  * @param TItem the native item type used in this recipe
  */
-abstract class FcRecipe<TItem> {
+interface FcRecipe<TItem> {
 
     /** The ingredients in the recipe. */
-    abstract val ingredients: List<FcItem<TItem>>
+    val ingredients: List<FcItem<TItem>>
 
     /** The results of the recipe. */
-    abstract val results: List<FcItem<TItem>>
+    val results: List<FcItem<TItem>>
 
     /** The permissions required to craft the recipe. */
-    abstract val permissions: List<Permission>
+    val permissions: List<Permission>
+
+    /**
+     * Prepare the recipe, allowing other plugins to change it before it is crafted.
+     */
+    fun prepare(player: FcPlayer<TItem>): FcPrepareRecipeEvent<TItem>
 
     /**
      * Simulate the crafting of this item with this recipe.
@@ -27,40 +32,20 @@ abstract class FcRecipe<TItem> {
      * @param player the [FcPlayer] crafting the recipe
      * @return the resulting crafting event
      */
-    abstract fun simulateCraft(player: FcPlayer<TItem>): FcItemCraftEvent<TItem>
+    fun craft(player: FcPlayer<TItem>): FcItemCraftEvent<TItem>
 
     /**
-     * Check if this recipe is equal to another.
+     * Check if this recipe is equal to an object.
      *
-     * @param recipe the [FcRecipe] to compare to
+     * @param other the object to compare to
      * @return `true` if the recipe are equal
      */
-    abstract fun equals(recipe: FcRecipe<TItem>): Boolean
-
-    /**
-     * Checks if this recipe is equal to an object.
-     *
-     * @return `false`
-     */
-    override fun equals(other: Any?) = false
+    override fun equals(other: Any?): Boolean
 
     /**
      * Generates a hash code for this recipe.
      *
      * @return the hash code
      */
-    final override fun hashCode(): Int {
-        var hash: Int = javaClass.canonicalName.hashCode()
-
-        for (ingredient in ingredients)
-            hash = hash * 7 + ingredient.hashCode()
-
-        for (result in results)
-            hash = hash * 11 + result.hashCode()
-
-        for (permission in permissions)
-            hash = hash * 13 + permission.hashCode()
-
-        return hash
-    }
+    override fun hashCode(): Int
 }
