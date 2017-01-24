@@ -5,4 +5,4 @@ package net.benwoodworth.fastcraft.core.dependencies.recipes
  *
  * @param TItem the native item type
  */
-abstract class FcShapelessRecipe<TItem> : FcRecipe<TItem>()
+abstract class FcShapelessRecipe<TItem> : FcRecipe<TItem>

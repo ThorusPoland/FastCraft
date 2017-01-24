@@ -8,7 +8,7 @@ import net.benwoodworth.fastcraft.core.dependencies.inventory.ItemGrid
  *
  * @param TItem the native item type
  */
-abstract class FcShapedRecipe<TItem> : FcRecipe<TItem>() {
+abstract class FcShapedRecipe<TItem> : FcRecipe<TItem> {
 
     /** The recipe's shape. */
     abstract val recipeShape: ItemGrid<FcItem<TItem>>
