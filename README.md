@@ -2,5 +2,5 @@
 
 FastCraft 1.0 is being developed in
 [Kotlin](http://kotlinlang.org/) for both the
-[Bukkit](http://bukkit.org/) and
+[Bukkit](http://dev.bukkit.org/) and
 [Sponge](http://spongepowered.org) server platforms.
