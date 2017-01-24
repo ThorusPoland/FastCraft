@@ -1,6 +1,7 @@
 package net.benwoodworth.fastcraft.core.dependencies.recipes
 
 import net.benwoodworth.fastcraft.core.dependencies.event.Cancellable
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcCraftingInventory
 import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 import net.benwoodworth.fastcraft.core.dependencies.inventory.ItemGrid
 import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
@@ -12,12 +13,9 @@ import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
  */
 interface FcItemCraftEvent<TItem> : Cancellable {
 
-    /** The player who crafted the item */
+    /** The player crafting the item. */
     val player: FcPlayer<TItem>
 
-    /** The matrix that was used to craft an item. */
-    val matrix: ItemGrid<FcItem<TItem>> // TODO Inventory instead of matrix.
-
-    /** The crafting item results. */
-    val results: List<FcItem<TItem>>
+    /** The crafting inventory. */
+    val inventory: FcCraftingInventory<TItem>
 }
