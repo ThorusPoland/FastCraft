@@ -28,5 +28,8 @@ class Dependencies<TItem>(
         val configProvider: FcConfigProvider,
 
         /** Schedules tasks */
-        val taskScheduler: FcTaskScheduler
+        val taskScheduler: FcTaskScheduler,
+
+        /** Provides various files */
+        val fileProvider: FcFileProvider
 )
