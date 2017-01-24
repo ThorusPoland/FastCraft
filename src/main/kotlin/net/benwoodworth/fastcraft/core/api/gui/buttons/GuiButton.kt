@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraft.api.gui.buttons
+package net.benwoodworth.fastcraft.core.api.gui.buttons
 
 import net.benwoodworth.fastcraft.core.dependencies.event.EventListener
-import net.benwoodworth.fastcraft.api.gui.events.GuiButtonClickEvent
-import net.benwoodworth.fastcraft.api.gui.layouts.GuiLayout
+import net.benwoodworth.fastcraft.core.api.gui.events.GuiButtonClickEvent
+import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
 
 /**
  * A button in a GUI.
