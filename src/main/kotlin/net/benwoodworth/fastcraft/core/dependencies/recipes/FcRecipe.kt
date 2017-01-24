@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.dependencies.recipes
 
-import net.benwoodworth.fastcraft.core.dependencies.event.events.FcItemCraftEvent
+import net.benwoodworth.fastcraft.core.dependencies.recipes.FcItemCraftEvent
 import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 import net.benwoodworth.fastcraft.core.dependencies.permissions.Permission
 import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer

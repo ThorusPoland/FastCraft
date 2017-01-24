@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.event.events
+package net.benwoodworth.fastcraft.core.dependencies.recipes
 
 import net.benwoodworth.fastcraft.core.dependencies.event.Cancellable
 import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem

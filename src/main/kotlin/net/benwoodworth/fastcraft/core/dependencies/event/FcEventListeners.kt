@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraft.core.dependencies.event
 
-import net.benwoodworth.fastcraft.core.dependencies.event.events.FcItemCraftEvent
-import net.benwoodworth.fastcraft.core.dependencies.event.events.FcPlayerJoinEvent
+import net.benwoodworth.fastcraft.core.dependencies.recipes.FcItemCraftEvent
+import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayerJoinEvent
 
 /**
  * Provides listeners to server events.
