@@ -14,7 +14,7 @@ interface FcInventory<TItem> {
     /** The title of the inventory. */
     val title: String?
 
-    /** The player viewing the inventory. */
+    /** The players viewing the inventory. */
     val viewers: List<FcPlayer<TItem>>
 
     /** The carrier of this inventory. */
