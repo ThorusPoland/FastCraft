@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.gui
 
-import net.benwoodworth.fastcraft.core.api.dependencies.Dependencies
+import net.benwoodworth.fastcraft.core.dependencies.Dependencies
 
 /**
  * An API for creating [Gui]'s

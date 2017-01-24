@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core
 
-import net.benwoodworth.fastcraft.core.api.dependencies.Dependencies
+import net.benwoodworth.fastcraft.core.dependencies.Dependencies
 
 /**
  * The core class of FastCraft.

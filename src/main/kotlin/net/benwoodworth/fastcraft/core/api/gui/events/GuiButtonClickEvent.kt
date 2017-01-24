@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraft.core.api.gui.events
 
-import net.benwoodworth.fastcraft.core.api.dependencies.event.Cancellable
-import net.benwoodworth.fastcraft.core.api.dependencies.player.FcPlayer
+import net.benwoodworth.fastcraft.core.dependencies.event.Cancellable
+import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
 import net.benwoodworth.fastcraft.core.api.gui.Gui
 import net.benwoodworth.fastcraft.core.api.gui.buttons.GuiButton
 

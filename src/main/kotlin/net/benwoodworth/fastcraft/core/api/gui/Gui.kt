@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.gui
 
-import net.benwoodworth.fastcraft.core.api.dependencies.inventory.FcInventory
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcInventory
 import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
 
 /**
