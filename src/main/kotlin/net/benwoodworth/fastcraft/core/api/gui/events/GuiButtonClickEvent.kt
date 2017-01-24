@@ -9,13 +9,14 @@ import net.benwoodworth.fastcraft.core.api.gui.buttons.GuiButton
  * An event triggered when a [GuiButton] is clicked.
  *
  * @param TItem the native item type
+ * @param TInventory the native inventory type
  */
-class GuiButtonClickEvent<TItem>(
+class GuiButtonClickEvent<TItem, TInventory>(
         /** The [Gui] in which the button was clicked. */
-        val gui: Gui<TItem>,
+        val gui: Gui<TItem, TInventory>,
 
         /** The [GuiButton] that was clicked. */
-        val button: GuiButton<TItem>,
+        val button: GuiButton<TItem, TInventory>,
 
         /** The [FcPlayer] who clicked the button. */
         val player: FcPlayer<TItem>

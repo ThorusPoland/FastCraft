@@ -4,8 +4,11 @@ import net.benwoodworth.fastcraft.core.dependencies.Dependencies
 
 /**
  * The core class of FastCraft.
+ *
+ * @param TItem The native item type
+ * @param TInventory The native inventory type
  */
-class FastCraft(
+class FastCraft<TItem, in TInventory>(
         /** FastCraft dependencies. */
-        var dependencies: Dependencies<*>
+        val dependencies: Dependencies<TItem, TInventory>
 )

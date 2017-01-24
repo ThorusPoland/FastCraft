@@ -8,11 +8,12 @@ import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
  * A button in a GUI.
  *
  * @param TItem the native item type
+ * @param TInventory the native inventory type
  */
-class GuiButton<TItem> : GuiLayout<TItem>() {
+class GuiButton<TItem, TInventory> : GuiLayout<TItem>() {
 
     /** This button's click listener */
-    val clickListener = EventListener<GuiButtonClickEvent<TItem>>()
+    val clickListener = EventListener<GuiButtonClickEvent<TItem, TInventory>>()
 
     /** The width of this button. (`1`) */
     override val width = 1

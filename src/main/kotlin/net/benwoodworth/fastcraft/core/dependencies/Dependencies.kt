@@ -9,11 +9,12 @@ import net.benwoodworth.fastcraft.core.dependencies.recipes.FcRecipeService
 /**
  * Provides dependencies for FastCraft.
  *
- * @param TItem the native item type.
+ * @param TItem the native item type
+ * @param TInventory the native inventory type
  */
-class Dependencies<TItem>(
+class Dependencies<TItem, in TInventory>(
         /** Provides new instances of inventories */
-        val inventoryProvider: FcInventoryProvider<TItem>,
+        val inventoryProvider: FcInventoryProvider<TItem, TInventory>,
 
         /** Provides server players */
         val playerProvider: FcPlayerProvider<TItem>,
