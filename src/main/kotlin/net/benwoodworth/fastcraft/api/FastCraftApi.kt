@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api;
+package net.benwoodworth.fastcraft.api;
 
 /**
  * A FastCraft API for use by other plugins.

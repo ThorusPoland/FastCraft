@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.gui.layouts
+package net.benwoodworth.fastcraft.api.gui.layouts
 
 import java.util.*
 

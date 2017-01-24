@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.api.gui
+package net.benwoodworth.fastcraft.api.gui
 
 import net.benwoodworth.fastcraft.core.dependencies.Dependencies
 
