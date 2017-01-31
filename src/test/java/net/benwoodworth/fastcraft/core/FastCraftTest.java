@@ -9,7 +9,7 @@ import org.junit.Test;
 class FastCraftTest {
     @Test
     void getDependencies() {
-        assertTrue("Intentionally failing to test CI", false);
+        assertTrue("Intentionally failing to test CI", true);
     }
 
 }
