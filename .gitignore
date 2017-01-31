@@ -1,14 +1,8 @@
+/.idea/
 /out/
 /build/
 
+/gradlew
+/gradlew.bat
+/gradle/
 /.gradle/
-
-*.iml
-/.idea/*
-!/.idea/inspectionProfiles/
-!/.idea/modules/
-!/.idea/.name
-!/.idea/compiler.xml
-!/.idea/encodings.xml
-!/.idea/gradle.xml
-!/.idea/modules.xml
