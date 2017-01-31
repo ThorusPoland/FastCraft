@@ -10,7 +10,7 @@ public class FastCraftTest {
     @Test
     public void getDependencies() {
         System.out.println("Test1");
-        assertTrue("Intentionally failing to test CI", true);
+        assertTrue("Intentionally failing to test CI", false);
         System.out.println("Test2");
     }
 
