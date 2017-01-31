@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class FastCraftTest {
     @Test
-    void getDependencies() {
+    public void getDependencies() {
         System.out.println("Test1");
         assertTrue("Intentionally failing to test CI", true);
         System.out.println("Test2");
