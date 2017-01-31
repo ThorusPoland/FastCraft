@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by Ben on 1/31/2017.
  */
-class FastCraftTest {
+public class FastCraftTest {
     @Test
     void getDependencies() {
         System.out.println("Test1");
