@@ -20,7 +20,7 @@ repositories {
     jcenter()
 
     maven {
-        url 'https://hub.spigotmc.org/nexus/content/repositories/releases/'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/public/'
     }
 
     maven {
