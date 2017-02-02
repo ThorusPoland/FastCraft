@@ -51,7 +51,7 @@ public class FastCraftApiTest {
         when(invProvider.adaptInventory(nonGuiInventory)).thenReturn(nonGuiInvAdapter);
 
         // Mock dependencies
-        Dependencies<ItemT, InvT> dependencies = new Dependencies<ItemT, InvT>(
+        Dependencies<ItemT, InvT> dependencies = new Dependencies<>(
                 invProvider,
                 mock(FcPlayerProvider.class),
                 mock(FcRecipeService.class),
@@ -62,10 +62,10 @@ public class FastCraftApiTest {
         );
 
         // Create FastCraft instance
-        fastCraft = new FastCraft<ItemT, InvT>(dependencies);
+        fastCraft = new FastCraft<>(dependencies);
 
         // Create API
-        api = new FastCraftApi<ItemT, InvT>(fastCraft);
+        api = new FastCraftApi<>(fastCraft);
     }
 
     @Test
