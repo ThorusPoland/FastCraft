@@ -2,7 +2,7 @@
 [![Downloads](https://img.shields.io/github/downloads/BenWoodworth/FastCraft/total.svg)](https://github.com/BenWoodworth/FastCraft/releases)
 
 #FastCraft 1.0
-FastCraft+ is coming out of beta as FastCraft 1.0! If you're just here for FastCraft+ documentation, look [below](#fastcraft)
+FastCraft+ is coming out of beta as FastCraft 1.0! If you're just here for FastCraft+ documentation, look [below](#fastcraft), or view the [v0.26.5 source](https://github.com/BenWoodworth/FastCraft/tree/v0.26.5).
 
 FastCraft 1.0 is being developed from the ground up in
 [Kotlin](http://kotlinlang.org/). This update will come with some big changes.
