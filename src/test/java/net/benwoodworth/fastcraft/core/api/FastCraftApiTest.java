@@ -2,15 +2,14 @@ package net.benwoodworth.fastcraft.core.api;
 
 import net.benwoodworth.fastcraft.core.FastCraft;
 import net.benwoodworth.fastcraft.core.api.gui.Gui;
-import net.benwoodworth.fastcraft.core.dependencies.Dependencies;
-import net.benwoodworth.fastcraft.core.dependencies.FcFileProvider;
-import net.benwoodworth.fastcraft.core.dependencies.FcTaskScheduler;
-import net.benwoodworth.fastcraft.core.dependencies.config.FcConfigProvider;
+import net.benwoodworth.fastcraft.core.dependencies.FileProvider;
+import net.benwoodworth.fastcraft.core.dependencies.TaskScheduler;
+import net.benwoodworth.fastcraft.core.dependencies.config.ConfigFactory;
 import net.benwoodworth.fastcraft.core.dependencies.inventory.FcInventory;
-import net.benwoodworth.fastcraft.core.dependencies.inventory.FcInventoryProvider;
-import net.benwoodworth.fastcraft.core.dependencies.permissions.FcPermissionService;
-import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayerProvider;
-import net.benwoodworth.fastcraft.core.dependencies.recipes.FcRecipeService;
+import net.benwoodworth.fastcraft.core.dependencies.inventory.InventoryFactory;
+import net.benwoodworth.fastcraft.core.dependencies.permissions.PermissionService;
+import net.benwoodworth.fastcraft.core.dependencies.player.PlayerProvider;
+import net.benwoodworth.fastcraft.core.dependencies.recipes.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -46,19 +45,19 @@ public class FastCraftApiTest {
         when(nonGuiInvAdapter.getCarrier()).thenReturn(null);
 
         // Mock an inventory provider
-        FcInventoryProvider<ItemT, InvT> invProvider = mock(FcInventoryProvider.class);
+        InventoryFactory<ItemT, InvT> invProvider = mock(InventoryFactory.class);
         when(invProvider.adaptInventory(guiInventory)).thenReturn(guiInvAdapter);
         when(invProvider.adaptInventory(nonGuiInventory)).thenReturn(nonGuiInvAdapter);
 
         // Mock dependencies
         Dependencies<ItemT, InvT> dependencies = new Dependencies<>(
                 invProvider,
-                mock(FcPlayerProvider.class),
-                mock(FcRecipeService.class),
-                mock(FcPermissionService.class),
-                mock(FcConfigProvider.class),
-                mock(FcTaskScheduler.class),
-                mock(FcFileProvider.class)
+                mock(PlayerProvider.class),
+                mock(RecipeService.class),
+                mock(PermissionService.class),
+                mock(ConfigFactory.class),
+                mock(TaskScheduler.class),
+                mock(FileProvider.class)
         );
 
         // Create FastCraft instance

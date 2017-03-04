@@ -7,7 +7,7 @@ import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
  *
  * @param TItem the native item type
  */
-interface FcPlayerJoinEvent<TItem> {
+interface PlayerJoinEvent<TItem> {
 
     /** The player who joined. */
     val player: FcPlayer<TItem>

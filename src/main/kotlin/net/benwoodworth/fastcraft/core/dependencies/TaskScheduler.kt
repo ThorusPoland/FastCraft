@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.dependencies
 /**
  * Executes server tasks.
  */
-interface FcTaskScheduler {
+interface TaskScheduler {
 
     /**
      * Schedule a task to be run on the main server thread.

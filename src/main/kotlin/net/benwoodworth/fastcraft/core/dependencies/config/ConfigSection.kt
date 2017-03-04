@@ -1,9 +1,9 @@
 package net.benwoodworth.fastcraft.core.dependencies.config
 
 /**
- * A section of a config, providing access to keys/values, and other sub-sections.
+ * A section of a configuration, providing access to keys/values, and other sub-sections.
  */
-interface FcConfigSection {
+interface ConfigSection {
 
     /**
      * Get a config section.
@@ -11,7 +11,7 @@ interface FcConfigSection {
      * @param name the section name
      * @return the section with the given name, or `null` if it doesn't exist
      */
-    fun getSection(name: String): FcConfigSection?
+    fun getSection(name: String): ConfigSection?
 
     /**
      * Create a new config section.
@@ -19,7 +19,7 @@ interface FcConfigSection {
      * @param name the name of the new section
      * @return the new config section
      */
-    fun createSection(name: String): FcConfigSection
+    fun createSection(name: String): ConfigSection
 
     /**
      * Set a value at a given key.

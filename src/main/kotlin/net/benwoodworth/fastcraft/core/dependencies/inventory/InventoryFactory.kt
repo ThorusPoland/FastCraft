@@ -6,7 +6,7 @@ package net.benwoodworth.fastcraft.core.dependencies.inventory
  * @param TItem the native item type
  * @param TInventory the native inventory type
  */
-interface FcInventoryProvider<TItem, in TInventory> {
+interface InventoryFactory<TItem, in TInventory> {
 
     /**
      * Create a new empty item.

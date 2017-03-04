@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.dependencies
 /**
  * Logs messages to the server console.
  */
-interface FcConsoleLogger {
+interface ConsoleLogger {
 
     /**
      * Log an error to the console.

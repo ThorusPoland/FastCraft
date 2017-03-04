@@ -5,7 +5,7 @@ package net.benwoodworth.fastcraft.core.dependencies.recipes
  *
  * @param TItem the native item type
  */
-interface FcRecipeService<TItem> {
+interface RecipeService<TItem> {
 
     /**
      * Get recipe sources.

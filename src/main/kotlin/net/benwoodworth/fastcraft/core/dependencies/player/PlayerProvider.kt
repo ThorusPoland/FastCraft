@@ -7,7 +7,7 @@ import java.util.*
  *
  * @param TItem The native item type the player carries.
  */
-interface FcPlayerProvider<TItem> {
+interface PlayerProvider<TItem> {
 
     /**
      * Get a list of online player.
