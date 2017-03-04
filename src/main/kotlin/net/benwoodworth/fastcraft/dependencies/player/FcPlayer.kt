@@ -1,7 +1,7 @@
-package net.benwoodworth.fastcraft.core.dependencies.player
+package net.benwoodworth.fastcraft.dependencies.player
 
-import net.benwoodworth.fastcraft.core.dependencies.inventory.FcInventory
-import net.benwoodworth.fastcraft.core.dependencies.permissions.Permission
+import net.benwoodworth.fastcraft.dependencies.inventory.FcInventory
+import net.benwoodworth.fastcraft.dependencies.permissions.Permission
 import java.util.*
 
 /**

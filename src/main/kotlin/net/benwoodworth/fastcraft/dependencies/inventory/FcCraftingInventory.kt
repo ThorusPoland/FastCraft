@@ -1,6 +1,6 @@
-package net.benwoodworth.fastcraft.core.dependencies.inventory
+package net.benwoodworth.fastcraft.dependencies.inventory
 
-import net.benwoodworth.fastcraft.core.dependencies.recipes.FcRecipe
+import net.benwoodworth.fastcraft.dependencies.recipes.FcRecipe
 
 /**
  * A Minecraft crafting inventory.

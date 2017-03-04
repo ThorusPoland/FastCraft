@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.event
+package net.benwoodworth.fastcraft.dependencies.event
 
 import java.util.*
 

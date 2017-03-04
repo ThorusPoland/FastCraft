@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.recipes
+package net.benwoodworth.fastcraft.dependencies.recipes
 
 /**
  * A source of recipes. (e.g. from plugins that register custom recipes)

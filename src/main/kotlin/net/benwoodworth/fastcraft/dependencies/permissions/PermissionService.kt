@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.permissions
+package net.benwoodworth.fastcraft.dependencies.permissions
 
 /**
  * Server permissions.

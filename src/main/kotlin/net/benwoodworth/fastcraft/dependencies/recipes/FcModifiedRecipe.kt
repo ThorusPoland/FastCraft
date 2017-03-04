@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.recipes
+package net.benwoodworth.fastcraft.dependencies.recipes
 
 /**
  * A custom recipe that adds extra functionality to a base recipe.

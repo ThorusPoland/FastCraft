@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.config
+package net.benwoodworth.fastcraft.dependencies.config
 
 import java.io.File
 import java.io.IOException

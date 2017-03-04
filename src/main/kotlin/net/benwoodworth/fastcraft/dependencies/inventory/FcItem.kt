@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.inventory
+package net.benwoodworth.fastcraft.dependencies.inventory
 
 /**
  * A Minecraft item.

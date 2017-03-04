@@ -1,4 +1,4 @@
-package net.benwoodworth.fastcraft.core.dependencies.player
+package net.benwoodworth.fastcraft.dependencies.player
 
 import java.util.*
 

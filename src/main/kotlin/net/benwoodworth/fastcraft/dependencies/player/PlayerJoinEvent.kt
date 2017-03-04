@@ -1,6 +1,6 @@
-package net.benwoodworth.fastcraft.core.dependencies.player
+package net.benwoodworth.fastcraft.dependencies.player
 
-import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
+import net.benwoodworth.fastcraft.dependencies.player.FcPlayer
 
 /**
  * An event for players joining the server.

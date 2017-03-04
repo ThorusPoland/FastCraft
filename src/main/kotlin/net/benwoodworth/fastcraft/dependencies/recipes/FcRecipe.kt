@@ -1,8 +1,8 @@
-package net.benwoodworth.fastcraft.core.dependencies.recipes
+package net.benwoodworth.fastcraft.dependencies.recipes
 
-import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
-import net.benwoodworth.fastcraft.core.dependencies.permissions.Permission
-import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
+import net.benwoodworth.fastcraft.dependencies.inventory.FcItem
+import net.benwoodworth.fastcraft.dependencies.permissions.Permission
+import net.benwoodworth.fastcraft.dependencies.player.FcPlayer
 
 /**
  * Adapts a recipe from the native implementation.
