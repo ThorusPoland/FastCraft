@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraft.core.api.gui
 
 import net.benwoodworth.fastcraft.core.FastCraft
-import net.benwoodworth.fastcraft.dependencies.inventory.InventoryFactory
+import net.benwoodworth.fastcraft.core.dependencies.inventory.InventoryFactory
 import javax.inject.Inject
 
 /**

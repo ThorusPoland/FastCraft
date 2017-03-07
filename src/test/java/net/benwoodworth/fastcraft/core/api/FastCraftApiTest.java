@@ -2,14 +2,14 @@ package net.benwoodworth.fastcraft.core.api;
 
 import net.benwoodworth.fastcraft.core.FastCraft;
 import net.benwoodworth.fastcraft.core.api.gui.Gui;
-import net.benwoodworth.fastcraft.dependencies.FileProvider;
-import net.benwoodworth.fastcraft.dependencies.TaskScheduler;
-import net.benwoodworth.fastcraft.dependencies.config.ConfigFactory;
-import net.benwoodworth.fastcraft.dependencies.inventory.FcInventory;
-import net.benwoodworth.fastcraft.dependencies.inventory.InventoryFactory;
-import net.benwoodworth.fastcraft.dependencies.permissions.PermissionService;
-import net.benwoodworth.fastcraft.dependencies.player.PlayerProvider;
-import net.benwoodworth.fastcraft.dependencies.recipes.RecipeService;
+import net.benwoodworth.fastcraft.core.dependencies.FileProvider;
+import net.benwoodworth.fastcraft.core.dependencies.TaskScheduler;
+import net.benwoodworth.fastcraft.core.dependencies.config.ConfigFactory;
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcInventory;
+import net.benwoodworth.fastcraft.core.dependencies.inventory.InventoryFactory;
+import net.benwoodworth.fastcraft.core.dependencies.permissions.PermissionService;
+import net.benwoodworth.fastcraft.core.dependencies.player.PlayerProvider;
+import net.benwoodworth.fastcraft.core.dependencies.recipes.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
 
