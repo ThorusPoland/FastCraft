@@ -50,7 +50,7 @@ interface ItemBuilder<TFcItem> {
      * @param lore The lore
      * @Return This builder, for chaining
      */
-    fun setLore(vararg lore: Array<String?>?): ItemBuilder<TFcItem>
+    fun setLore(vararg lore: List<String?>?): ItemBuilder<TFcItem>
 
     /**
      * Add an enchantment.

@@ -1,12 +1,12 @@
 package net.benwoodworth.fastcraft.core
 
 import net.benwoodworth.fastcraft.core.api.gui.GuiFactory
-import javax.inject.Singleton
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 
 /**
- * Created by Ben on 3/6/2017.
+ * A Dagger component for injecting FastCraft dependencies.
  */
-interface FastCraftComponent<TFcItem> {
+interface FastCraftComponent<TFcItem : FcItem<*>> {
 
     fun getFastCraft(): FastCraft<TFcItem>
 
