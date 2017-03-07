@@ -3,17 +3,9 @@ package net.benwoodworth.fastcraft.dependencies.inventory
 /**
  * Provides inventories and items for the plugin.
  *
- * @param TItem the native item type
- * @param TInventory the native inventory type
+ * @param TFcItem the item type
  */
-interface InventoryFactory<TItem, in TInventory> {
-
-    /**
-     * Create a new empty item.
-     *
-     * @return a new empty item
-     */
-    fun createItem(): FcItem<TItem>
+interface InventoryFactory<TFcItem : FcItem<*>> {
 
     /**
      * Create a new chest inventory.
@@ -23,13 +15,6 @@ interface InventoryFactory<TItem, in TInventory> {
      * @param carrier the carrier of the inventory
      * @return a chest inventory with the specified height and title
      */
-    fun createChestInventory(height: Int, title: String? = null, carrier: Any? = null): FcChestInventory<TItem>
+    fun createChestInventory(height: Int, title: String? = null, carrier: Any? = null): FcChestInventory<TFcItem>
 
-    /**
-     * Adapt a native inventory implementation.
-     *
-     * @param inventory the native inventory
-     * @return the adapted inventory
-     */
-    fun adaptInventory(inventory: TInventory): FcInventory<TItem>
 }
