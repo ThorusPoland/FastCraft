@@ -1,15 +1,16 @@
 package net.benwoodworth.fastcraft.dependencies.player
 
 import net.benwoodworth.fastcraft.dependencies.inventory.FcInventory
+import net.benwoodworth.fastcraft.dependencies.inventory.FcItem
 import net.benwoodworth.fastcraft.dependencies.permissions.Permission
 import java.util.*
 
 /**
  * A Minecraft player.
  *
- * @param TItem The native item type that the player carries.
+ * @param TFcItem The type of item the player carries.
  */
-interface FcPlayer<TItem> {
+interface FcPlayer<TFcItem : FcItem<*>> {
 
     /** The player's username. */
     val username: String
@@ -39,5 +40,5 @@ interface FcPlayer<TItem> {
      *
      * @param inventory The inventory to open.
      */
-    fun openInventory(inventory: FcInventory<TItem>)
+    fun openInventory(inventory: FcInventory<TFcItem>)
 }

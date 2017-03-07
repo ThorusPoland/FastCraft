@@ -7,15 +7,15 @@ import java.util.*
 /**
  * A Minecraft inventory.
  *
- * @param TItem the native item type
+ * @param TFcItem type of item contained in this inventory.
  */
-interface FcInventory<TItem> {
+interface FcInventory<TFcItem : FcItem<*>> {
 
     /** The title of the inventory. */
     val title: String?
 
     /** The players viewing the inventory. */
-    val viewers: List<FcPlayer<TItem>>
+    val viewers: List<FcPlayer<TFcItem>>
 
     /** The carrier of this inventory. */
     val carrier: Any?

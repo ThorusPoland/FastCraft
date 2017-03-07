@@ -9,17 +9,16 @@ import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
  * @param fastCraft an instance of FastCraft
  * @param height the height of the GUI
  * @param title the inventory title
- * @param TItem the native item type
- * @param TInventory the native inventory type
+ * @param TFcItem the item type
  */
-class Gui<TItem, TInventory>(
-        fastCraft: FastCraft<TItem, TInventory>,
+class Gui<TFcItem>(
+        fastCraft: FastCraft<TFcItem>,
         height: Int,
         title: String? = null
-) : GuiLayout<TItem>() {
+) : GuiLayout<TFcItem>() {
 
     /** The inventory containing this GUI. */
-    private val inventory = fastCraft.dependencies.inventoryProvider.createChestInventory(height, title, this)
+
 
     /** TODO */
     override val width: Int
