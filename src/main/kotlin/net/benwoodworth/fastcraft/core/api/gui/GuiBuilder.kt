@@ -6,7 +6,7 @@ import javax.inject.Inject
 /**
  * A factory for creating GUI's
  */
-class GuiFactory<TFcItem : FcItem<*>> @Inject constructor(
+class GuiBuilder<TFcItem : FcItem<*>> @Inject constructor(
 //        fastCraft: FastCraft<TFcItem>,
 //        inventoryFactory: InventoryFactory<TFcItem>
 ) {
