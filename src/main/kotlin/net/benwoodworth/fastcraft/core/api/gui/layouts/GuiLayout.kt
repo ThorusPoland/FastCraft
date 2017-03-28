@@ -33,7 +33,6 @@ open class GuiLayout<TFcItem : FcItem<*>>(
      */
     fun addLayout(layout: GuiLayout<TFcItem>, x: Int, y: Int) {
         childLayouts += LayoutPosition(layout, x, y)
-
         layout.layoutChangeListener.addHandler(layoutChangeListener::notifyHandlers)
     }
 
@@ -55,10 +54,7 @@ open class GuiLayout<TFcItem : FcItem<*>>(
      */
     fun getButton(x: Int, y: Int): GuiButton<TFcItem>? {
         val layout = childLayoutAtPoint(x, y).layout
-        if (layout is GuiButton<TFcItem>)
-            return layout
-
-        return null
+        return if (layout is GuiButton<TFcItem>) layout else null
     }
 
     /**
