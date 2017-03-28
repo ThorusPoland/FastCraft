@@ -17,4 +17,6 @@ interface InventoryFactory<TFcItem : FcItem<*>> {
      */
     fun createChestInventory(height: Int, title: String? = null, carrier: Any? = null): FcChestInventory<TFcItem>
 
+
+
 }

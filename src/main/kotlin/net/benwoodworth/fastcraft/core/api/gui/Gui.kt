@@ -1,20 +1,23 @@
 package net.benwoodworth.fastcraft.core.api.gui
 
-import net.benwoodworth.fastcraft.core.FastCraft
 import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcChestInventory
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 
 /**
  * A user interface for in-game players.
  *
  * @param TFcItem the item type
  */
-abstract class Gui<TFcItem> : GuiLayout<TFcItem>() {
+class Gui<TFcItem : FcItem<*>>(
+        private val inventory: FcChestInventory<TFcItem>
+) : GuiLayout<TFcItem>() {
 
-    /** TODO */
+    
+
     override val width: Int
-        get() = throw UnsupportedOperationException()
+        get() = inventory.width
 
-    /** TODO */
     override val height: Int
-        get() = throw UnsupportedOperationException()
+        get() = inventory.height
 }
