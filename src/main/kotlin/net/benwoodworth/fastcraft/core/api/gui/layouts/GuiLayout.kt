@@ -11,7 +11,7 @@ import java.util.*
 abstract class GuiLayout<TItem> {
 
     /** The layouts that compose this layout. */
-    private val innerLayouts = ArrayList<LayoutCoordinate<TItem>>()
+    private val innerLayouts = ArrayList<LayoutPosition<TItem>>()
 
     /** Get the width of this [GuiLayout]. */
     abstract val width: Int
@@ -25,7 +25,7 @@ abstract class GuiLayout<TItem> {
      * @param layout the layout to add
      */
     fun addLayout(layout: GuiLayout<TItem>, x: Int, y: Int) {
-        innerLayouts += LayoutCoordinate(layout, x, y)
+        innerLayouts += LayoutPosition(layout, x, y)
 
         // Register listeners
         // TODO
@@ -39,26 +39,26 @@ abstract class GuiLayout<TItem> {
      * @return the layout at the specified point, and the coordinates
      *         within that layout that these coordinates point to
      */
-    private fun layoutAtPoint(x: Int, y: Int): LayoutCoordinate<TItem> {
-        for (layoutCoord in innerLayouts) {
-            val xRange = (layoutCoord.x)..(layoutCoord.x + layoutCoord.layout.width)
-            val yRange = (layoutCoord.y)..(layoutCoord.y + layoutCoord.layout.height)
+    private fun layoutAtPoint(x: Int, y: Int): LayoutPosition<TItem> {
+        for (layoutPosition in innerLayouts) {
+            val xRange = (layoutPosition.x)..(layoutPosition.x + layoutPosition.layout.width)
+            val yRange = (layoutPosition.y)..(layoutPosition.y + layoutPosition.layout.height)
 
             if (x in xRange && y in yRange) {
-                val newX = x - layoutCoord.layout.width
-                val newY = y - layoutCoord.layout.height
-                return layoutCoord.layout.layoutAtPoint(newX, newY)
+                val newX = x - layoutPosition.layout.width
+                val newY = y - layoutPosition.layout.height
+                return layoutPosition.layout.layoutAtPoint(newX, newY)
             }
         }
 
         // No inner layout at point
-        return LayoutCoordinate(this, x, y)
+        return LayoutPosition(this, x, y)
     }
 
     /**
      * Contains a layout, and a coordinate pair.
      */
-    private class LayoutCoordinate<TItem>(
+    private class LayoutPosition<TItem>(
             /** The layout. */
             val layout: GuiLayout<TItem>,
 
