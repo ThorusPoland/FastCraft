@@ -11,13 +11,16 @@ import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
  */
 class Gui<TFcItem : FcItem<*>>(
         private val inventory: FcChestInventory<TFcItem>
-) : GuiLayout<TFcItem>() {
+) : GuiLayout<TFcItem>(inventory.width, inventory.height) {
 
-    
-
-    override val width: Int
-        get() = inventory.width
-
-    override val height: Int
-        get() = inventory.height
+    /**
+     * Update the inventory to reflect the GUI.
+     */
+    private fun updateInventory() {
+        for (x in 0 until width) {
+            for (y in 0 until height) {
+                inventory.setItem(x, y, getButton(x, y)?.buttonItem)
+            }
+        }
+    }
 }

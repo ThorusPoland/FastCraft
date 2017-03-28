@@ -8,6 +8,4 @@ import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 interface FastCraftComponent<TFcItem : FcItem<*>> {
 
     fun getFastCraft(): FastCraft<TFcItem>
-
-    fun getGuiBuilder(): GuiFactory<TFcItem>
 }
