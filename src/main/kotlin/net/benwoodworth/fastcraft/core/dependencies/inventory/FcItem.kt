@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.dependencies.inventory
 /**
  * A Minecraft item.
  *
- * @param TBase the native item type
+ * @param TBase the item type
  */
 interface FcItem<TBase> {
 

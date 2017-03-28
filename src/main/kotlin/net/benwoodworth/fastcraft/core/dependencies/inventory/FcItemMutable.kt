@@ -3,7 +3,7 @@ package net.benwoodworth.fastcraft.core.dependencies.inventory
 /**
  * A mutable Minecraft item.
  *
- * @param TBase the native item type
+ * @param TBase the item type
  */
 interface FcItemMutable<TBase> : FcItem<TBase> {
 

@@ -1,23 +1,25 @@
 package net.benwoodworth.fastcraft.core.dependencies.recipes
 
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
+
 /**
  * Provides recipe from the server.
  *
- * @param TItem the native item type
+ * @param TFcItem the item type
  */
-interface RecipeService<TItem> {
+interface RecipeService<TFcItem : FcItem<*>> {
 
     /**
      * Get recipe sources.
      *
      * @return the recipe sources
      */
-    fun getRecipeSources(): List<RecipeSource<TItem>>
+    fun getRecipeSources(): List<RecipeSource<TFcItem>>
 
     /**
      * Get the recipes provided by the native server.
      *
      * @return the server crafting recipes
      */
-    fun getServerCraftingRecipes(): List<FcRecipe<TItem>>
+    fun getServerCraftingRecipes(): List<FcRecipe<TFcItem>>
 }

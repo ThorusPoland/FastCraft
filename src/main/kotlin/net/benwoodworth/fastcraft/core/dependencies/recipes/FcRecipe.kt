@@ -7,15 +7,15 @@ import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
 /**
  * Adapts a recipe from the native implementation.
  *
- * @param TItem the native item type used in this recipe
+ * @param TFcItem the item type
  */
-interface FcRecipe<TItem> {
+interface FcRecipe<TFcItem : FcItem<*>> {
 
     /** The ingredients in the recipe. */
-    val ingredients: List<FcItem<TItem>>
+    val ingredients: List<FcItem<TFcItem>>
 
     /** The results of the recipe. */
-    val results: List<FcItem<TItem>>
+    val results: List<FcItem<TFcItem>>
 
     /** The permissions required to craft the recipe. */
     val permissions: List<Permission>

@@ -11,7 +11,7 @@ import net.benwoodworth.fastcraft.core.dependencies.player.FcPlayer
  *
  * @param TFcItem the item type
  */
-class GuiButtonClickEvent<TFcItem : FcItem<*>>(
+class EventGuiButtonClick<TFcItem : FcItem<*>>(
         /** The [Gui] in which the button was clicked. */
         val gui: Gui<TFcItem>,
 

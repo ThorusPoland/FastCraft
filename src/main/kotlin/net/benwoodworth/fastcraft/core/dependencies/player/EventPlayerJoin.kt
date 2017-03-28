@@ -5,9 +5,9 @@ import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
 /**
  * An event for players joining the server.
  *
- * @param TItem the native item type
+ * @param TFcItem the item type
  */
-interface PlayerJoinEvent<TFcItem : FcItem<*>> {
+interface EventPlayerJoin<TFcItem : FcItem<*>> {
 
     /** The player who joined. */
     val player: FcPlayer<TFcItem>

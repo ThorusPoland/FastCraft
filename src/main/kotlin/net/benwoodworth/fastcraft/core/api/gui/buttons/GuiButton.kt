@@ -1,6 +1,6 @@
 package net.benwoodworth.fastcraft.core.api.gui.buttons
 
-import net.benwoodworth.fastcraft.core.api.gui.events.GuiButtonClickEvent
+import net.benwoodworth.fastcraft.core.api.gui.events.EventGuiButtonClick
 import net.benwoodworth.fastcraft.core.api.gui.layouts.GuiLayout
 import net.benwoodworth.fastcraft.core.dependencies.event.EventListener
 import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
@@ -17,5 +17,5 @@ class GuiButton<TFcItem : FcItem<*>>(
 ) : GuiLayout<TFcItem>(1, 1) {
 
     /** This button's click listener */
-    val clickListener = EventListener<GuiButtonClickEvent<TFcItem>>()
+    val clickListener = EventListener<EventGuiButtonClick<TFcItem>>()
 }

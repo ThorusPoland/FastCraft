@@ -1,12 +1,14 @@
 package net.benwoodworth.fastcraft.core.dependencies.recipes
 
+import net.benwoodworth.fastcraft.core.dependencies.inventory.FcItem
+
 /**
  * A custom recipe that adds extra functionality to a base recipe.
  *
- * @param TItem the native item type
+ * @param TFcItem the item type
  */
-interface FcModifiedRecipe<TItem> : FcRecipe<TItem> {
+interface FcModifiedRecipe<TFcItem : FcItem<*>> : FcRecipe<TFcItem> {
 
     /** The base recipe, overridden by this recipe */
-    val baseRecipe: FcRecipe<TItem>
+    val baseRecipe: FcRecipe<TFcItem>
 }
