@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/BenWoodworth/FastCraft.svg)](https://travis-ci.org/BenWoodworth/FastCraft)
 [![Downloads](https://img.shields.io/github/downloads/BenWoodworth/FastCraft/total.svg)](https://github.com/BenWoodworth/FastCraft/releases)
 
-#FastCraft 1.0
+# FastCraft 1.0
 FastCraft+ is coming out of beta as FastCraft 1.0! If you're just here for FastCraft+, you can view the [documentation](#fastcraft), or take a look at the [v0.26.5 source](https://github.com/BenWoodworth/FastCraft/tree/v0.26.5).
 
 FastCraft 1.0 is being developed from the ground up in
@@ -20,15 +20,15 @@ learned from my education and job experience in order to be more maintainable, a
 as unit testing, to better prevent issues from showing up between releases.
 
 <hr>
-#FastCraft+
+# FastCraft+
 
-##Setup
+## Setup
 - Add this plugin's _FastCraftPlus.jar_ file to your server's _plugins_ directory.
 - Assign this plugin's permissions. (Permissions are listed below)
 - Start the server to generate configuration files in the /plugins/FastCraftPlus/ directory.
 - Edit the configuration files, and run the command _/fcadmin reload_ to reload the configs.
 
-##Commands
+## Commands
 Required parameters have &lt;angle brackets&gt;. Optional parameters have [square brackets].
 
 <table width=100%>
@@ -82,7 +82,7 @@ Required parameters have &lt;angle brackets&gt;. Optional parameters have [squar
   </tr>
 </table>
 
-#Permissions
+# Permissions
 <table width=100%>
   <tr>
     <th>Default</th>
