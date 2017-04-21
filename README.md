@@ -18,10 +18,9 @@ do the job.
 The rewrite of the plugin will be more rigerous, incorporating software design patterns
 learned from my education and job experience in order to be more maintainable, as well
 as unit testing, to better prevent issues from showing up between releases.
-
 <hr>
-# FastCraft+
 
+# FastCraft+
 ## Setup
 - Add this plugin's _FastCraftPlus.jar_ file to your server's _plugins_ directory.
 - Assign this plugin's permissions. (Permissions are listed below)
