@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/BenWoodworth/FastCraft.svg)](https://travis-ci.org/BenWoodworth/FastCraft)
 [![Downloads](https://img.shields.io/github/downloads/BenWoodworth/FastCraft/total.svg)](https://github.com/BenWoodworth/FastCraft/releases)
 
-# FastCraft 1.0
-FastCraft+ is coming out of beta as FastCraft 1.0! If you're just here for FastCraft+, you can view the [documentation](#fastcraft), or take a look at the [v0.26.5 source](https://github.com/BenWoodworth/FastCraft/tree/v0.26.5).
+# FastCraft v1
+FastCraft+ is coming out of beta as FastCraft v1! If you're just here for FastCraft+, you can view the [documentation](#fastcraft), or take a look at the [v0 branch](https://github.com/BenWoodworth/FastCraft/tree/FastCraftv0).
 
-FastCraft 1.0 is being developed from the ground up in
+FastCraft v1 is being developed from the ground up in
 [Kotlin](http://kotlinlang.org/). This update will come with some big changes.
 Firstly, the plugin will be developed for both
 [Bukkit](https://dev.bukkit.org/) and
@@ -20,7 +20,7 @@ learned from my education and job experience in order to be more maintainable, a
 as unit testing, to better prevent issues from showing up between releases.
 <hr>
 
-# FastCraft+
+# FastCraft+ v0
 ## Setup
 - Add this plugin's _FastCraftPlus.jar_ file to your server's _plugins_ directory.
 - Assign this plugin's permissions. (Permissions are listed below)
