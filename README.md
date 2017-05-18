@@ -2,10 +2,10 @@
 [![Downloads](https://img.shields.io/github/downloads/BenWoodworth/FastCraft/total.svg)](https://github.com/BenWoodworth/FastCraft/releases)
 
 # FastCraft v0
-Looking for FastCraft v0? [Click here!](https://github.com/BenWoodworth/FastCraft/tree/FastCraftv0)
+Looking for FastCraft+ v0? [Click here!](https://github.com/BenWoodworth/FastCraft/tree/FastCraftv0)
 
 # FastCraft v1
-FastCraft+ is coming out of beta as FastCraft v1!.
+FastCraft+ is coming out of beta as FastCraft v1!
 
 FastCraft v1 is being developed from the ground up in
 [Kotlin](http://kotlinlang.org/). This update will come with some big changes.
@@ -21,4 +21,3 @@ do the job.
 The rewrite of the plugin will be more rigerous, incorporating software design patterns
 learned from my education and job experience in order to be more maintainable, as well
 as unit testing, to better prevent issues from showing up between releases.
-<hr>
