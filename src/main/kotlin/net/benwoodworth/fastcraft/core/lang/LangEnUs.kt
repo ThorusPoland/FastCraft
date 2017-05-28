@@ -3,43 +3,38 @@ package net.benwoodworth.fastcraft.core.lang
 /**
  * English localization.
  */
-class LangEnUs : Lang("EN-US") {
-
-    override fun gui_title() = "FastCraft"
+class LangEnUs : Lang {
 
     override fun gui_ingredients_label() = "§aIngredients"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_results_label() = "§aResults:"
-    override fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§aHashCode:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 $hashcode"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§aPrevious Page"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§bGo to page $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§aNext Page"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§bGo to page $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§aRefresh"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§bRefresh the FastCraft interface"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§aCrafting Multiplier (${multiplier}x)"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§bLeft/right click to increase/decrease",
             "§bShift click to adjust by 1",
             "§bMiddle click to reset to 1x"
     )
 
     override fun gui_toolbar_workbench_title() = "§aCrafting Grid"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§bOpen a 3x3 crafting grid",
             "§bUse §a/fc toggle §bto disable FastCraft"
     )

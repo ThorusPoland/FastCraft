@@ -6,43 +6,38 @@ package net.benwoodworth.fastcraft.core.lang
  * Translated into German by CloudeLecaw:
  * https://www.spigotmc.org/members/cloudelecaw.34292/
  */
-class LangDe : Lang("DE") {
-
-    override fun gui_title() = "FastCraft"
+class LangDe : Lang {
 
     override fun gui_ingredients_label() = "§aZutaten:"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§b ${amount}x $item"
 
     override fun gui_results_label() = "§aErgebnisse:"
-    override fun gui_results_item(item: String, amount: Int) = "§b ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§7Hashcode:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 <hash>"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§avorherige Seite"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§bblätter auf Seite $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§anachste Seite"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§bblätter auf Seite $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§aaktualisieren"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§bNeusoritierung der Gegenstände"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§aaktualisieren"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§bLinks/Rechtsklick - erhöhen/vermindern",
             "§bSHIFT-klick - um 1 erhöhen",
             "§bMittelklick - auf 1x zurückzusetzen"
     )
 
     override fun gui_toolbar_workbench_title() = "§aWerkbank"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§bnormale 3x3 Werkbank",
             "§b/fc toggle zum deaktivieren."
     )

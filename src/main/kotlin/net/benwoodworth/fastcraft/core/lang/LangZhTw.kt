@@ -5,43 +5,38 @@ package net.benwoodworth.fastcraft.core.lang
  *
  * Translated into Chinese (Traditional, Taiwan) by HappyAreaBean from LavaApple Studio
  */
-class LangZhTw : Lang("ZH-TW") {
-
-    override fun gui_title() = "FastCraft"
+class LangZhTw : Lang {
 
     override fun gui_ingredients_label() = "§a配方:"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_results_label() = "§a獲得:"
-    override fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§7HashCode:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 <hash>"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§a上一頁"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§b回到 $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§a下一頁"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§b前往 $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§a刷新"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§b刷新 快速合成"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§a刷新"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§左鍵來增加/右鍵來減少",
             "§b按住Shift增加1",
             "§b中鍵回到1x"
     )
 
     override fun gui_toolbar_workbench_title() = "§a合成台"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§b打開 3x3 合成台",
             "§b使用 §a/fc toggle §b 來關閉 FastCraft"
     )

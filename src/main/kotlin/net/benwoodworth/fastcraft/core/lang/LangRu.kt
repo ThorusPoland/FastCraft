@@ -6,43 +6,38 @@ package net.benwoodworth.fastcraft.core.lang
  * Translated into Russian by RusIK:
  * https://www.spigotmc.org/members/rusik.189845/
  */
-class LangRu : Lang("RU") {
-
-    override fun gui_title() = "FastCraft"
+class LangRu : Lang {
 
     override fun gui_ingredients_label() = "§aИнгредиенты:"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_results_label() = "§aResults:"
-    override fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§7Хеш:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 <hash>"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§aПредыдущая страница"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§bНа страницу $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§aСледующая страница"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§bНа страницу $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§aОбновить"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§bОбновить интерфейс FastCraft"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§aОбновить"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§bПравый/левый клик для увеличения/уменьшения",
             "§bНажми Shift для увеличения на 1",
             "§bНажми на колёсико мыши для сброса до 1"
     )
 
     override fun gui_toolbar_workbench_title() = "§aСтандартный верстак"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§bОткрыть сетку крафта 3x3"
     )
 

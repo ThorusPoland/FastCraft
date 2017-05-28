@@ -6,43 +6,38 @@ package net.benwoodworth.fastcraft.core.lang
  * Translated into Dutch by funzo88:
  * https://www.spigotmc.org/members/funzo88.78211/
  */
-class LangNl : Lang("NL") {
-
-    override fun gui_title() = "FastCraft"
+class LangNl : Lang {
 
     override fun gui_ingredients_label() = "§aIngrediënten:"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_results_label() = "§aResults:"
-    override fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§7Hashcode:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 <hash>"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§aVorige Pagina"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§bGa naar pagina $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§aVolgende Pagina"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§bGa naar pagina $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§aVervers"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§bVervers de FastCraft interface"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§aVervers"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§bLinker/rechter muisklik om te toenemen/afnemen",
             "§bShift klik om toe te nemen met 1",
             "§bMiddrl muisklik om te resetten naar 1x"
     )
 
     override fun gui_toolbar_workbench_title() = "§aWerkbank"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§bOpen een 3x3 werkbank"
     )
 

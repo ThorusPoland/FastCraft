@@ -6,43 +6,38 @@ package net.benwoodworth.fastcraft.core.lang
  * Translated into Vietnamese by AnhCraft:
  * https://www.spigotmc.org/members/anhcraft.252895/
  */
-class LangVi : Lang("VI") {
-
-    override fun gui_title() = "FastCraft"
+class LangVi : Lang {
 
     override fun gui_ingredients_label() = "§aCác thành phần:"
-    override fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_results_label() = "§aCác kết quả:"
-    override fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
     override fun gui_recipeHash_label() = "§7Mã băm:"
-    override fun gui_recipeHash_code(hashcode: String) = "§7 <hash>"
 
     override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§aTrang trước"
-    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int) = listOf(
             "§bTới trang $prev/$total"
     )
 
     override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§aTrang sau"
-    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int) = listOf(
             "§bTới trang $next/$total"
     )
 
     override fun gui_toolbar_refresh_title() = "§aLàm mới"
-    override fun gui_toolbar_refresh_desc() = listOf(
+    override fun gui_toolbar_refresh_lore() = listOf(
             "§bLàm mới giao diện FastCraft"
     )
 
     override fun gui_toolbar_multiplier_title(multiplier: Int) = "§aLàm mới"
-    override fun gui_toolbar_multiplier_desc(multiplier: Int) = listOf(
+    override fun gui_toolbar_multiplier_lore(multiplier: Int) = listOf(
             "§bChuột trái/phải để tăng/giảm",
             "§bGiữ Shift để tăng 1",
             "§bChuột giữa để trở về 1x"
     )
 
     override fun gui_toolbar_workbench_title() = "§aBàn chế tạo"
-    override fun gui_toolbar_workbench_desc() = listOf(
+    override fun gui_toolbar_workbench_lore() = listOf(
             "§bMở bàn chế tạo 3x3",
             "§bDùng §a/fc toggle§b để tắt FastCraft"
     )

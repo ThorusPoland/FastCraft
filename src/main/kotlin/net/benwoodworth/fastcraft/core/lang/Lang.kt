@@ -8,59 +8,58 @@ package net.benwoodworth.fastcraft.core.lang
  * Use the section symbol (§) for formatting/color codes:
  * http://minecraft.gamepedia.com/Formatting_codes
  */
-abstract class Lang(val localeId: String) {
+interface Lang {
     companion object {
-        /**
-         * All the Lang translations.
-         */
-        val all = listOf(
-                LangEnUs()
+        val localizations = hashMapOf(
+                "cs"    to LangCs(),
+                "de"    to LangDe(),
+                "en-us" to LangEnUs(),
+                "nl"    to LangNl(),
+                "pl"    to LangPl(),
+                "ru"    to LangRu(),
+                "tr"    to LangTr(),
+                "vi"    to LangVi(),
+                "zh-cn" to LangZhCn(),
+                "zh-tw" to LangZhTw()
         )
-
-        /**
-         * Get a Lang given a locale ID.
-         */
-        fun getLang(localeId: String) = all.single {
-            it.localeId.toLowerCase() == localeId.toLowerCase()
-        }
     }
 
-    abstract fun gui_title(): String
+    fun gui_title() = "FastCraft"
 
-    abstract fun gui_ingredients_label(): String
-    abstract fun gui_ingredients_item(item: String, amount: Int): String
+    fun gui_ingredients_label(): String
+    fun gui_ingredients_item(item: String, amount: Int) = "§a ${amount}x $item"
 
-    abstract fun gui_results_label(): String
-    abstract fun gui_results_item(item: String, amount: Int): String
+    fun gui_results_label(): String
+    fun gui_results_item(item: String, amount: Int) = "§a ${amount}x $item"
 
-    abstract fun gui_recipeHash_label(): String
-    abstract fun gui_recipeHash_code(hashcode: String): String
+    fun gui_recipeHash_label(): String
+    fun gui_recipeHash_code(hashcode: String) = "§7 $hashcode"
 
-    abstract fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int): String
-    abstract fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int): List<String>
+    fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int): String
+    fun gui_toolbar_prev_lore(cur: Int, prev: Int, total: Int): List<String>
 
-    abstract fun gui_toolbar_next_title(cur: Int, next: Int, total: Int): String
-    abstract fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int): List<String>
+    fun gui_toolbar_next_title(cur: Int, next: Int, total: Int): String
+    fun gui_toolbar_next_lore(cur: Int, next: Int, total: Int): List<String>
 
-    abstract fun gui_toolbar_refresh_title(): String
-    abstract fun gui_toolbar_refresh_desc(): List<String>
+    fun gui_toolbar_refresh_title(): String
+    fun gui_toolbar_refresh_lore(): List<String>
 
-    abstract fun gui_toolbar_multiplier_title(multiplier: Int): String
-    abstract fun gui_toolbar_multiplier_desc(multiplier: Int): List<String>
+    fun gui_toolbar_multiplier_title(multiplier: Int): String
+    fun gui_toolbar_multiplier_lore(multiplier: Int): List<String>
 
-    abstract fun gui_toolbar_workbench_title(): String
-    abstract fun gui_toolbar_workbench_desc(): List<String>
+    fun gui_toolbar_workbench_title(): String
+    fun gui_toolbar_workbench_lore(): List<String>
 
-    abstract fun command_err_usage(commandUsage: String): String
-    abstract fun command_err_noPerm(permission: String): String
-    abstract fun command_err_playerOnly(): String
-    abstract fun command_err_consoleOnly(): String
-    abstract fun command_err_unknownPlayer(player: String): String
+    fun command_err_usage(commandUsage: String): String
+    fun command_err_noPerm(permission: String): String
+    fun command_err_playerOnly(): String
+    fun command_err_consoleOnly(): String
+    fun command_err_unknownPlayer(player: String): String
 
-    abstract fun command_fc_toggle_output_self_on(): String
-    abstract fun command_fc_toggle_output_self_off(): String
-    abstract fun command_fc_toggle_output_other_on(player: String): String
-    abstract fun command_fc_toggle_output_other_off(player: String): String
+    fun command_fc_toggle_output_self_on(): String
+    fun command_fc_toggle_output_self_off(): String
+    fun command_fc_toggle_output_other_on(player: String): String
+    fun command_fc_toggle_output_other_off(player: String): String
 
-    abstract fun command_fca_reload(): String
+    fun command_fca_reload(): String
 }
