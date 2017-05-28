@@ -36,11 +36,11 @@ abstract class Lang(val localeId: String) {
     abstract fun gui_recipeHash_label(): String
     abstract fun gui_recipeHash_code(hashcode: String): String
 
-    abstract fun gui_toolbar_prev_title(prev: Int, total: Int): String
-    abstract fun gui_toolbar_prev_desc(prev: Int, total: Int): List<String>
+    abstract fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int): String
+    abstract fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int): List<String>
 
-    abstract fun gui_toolbar_next_title(next: Int, total: Int): String
-    abstract fun gui_toolbar_next_desc(next: Int, total: Int): List<String>
+    abstract fun gui_toolbar_next_title(cur: Int, next: Int, total: Int): String
+    abstract fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int): List<String>
 
     abstract fun gui_toolbar_refresh_title(): String
     abstract fun gui_toolbar_refresh_desc(): List<String>

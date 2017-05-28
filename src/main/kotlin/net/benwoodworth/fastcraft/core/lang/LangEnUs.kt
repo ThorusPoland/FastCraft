@@ -1,7 +1,7 @@
 package net.benwoodworth.fastcraft.core.lang
 
 /**
- * Created by ben on 5/27/17.
+ * English localization.
  */
 class LangEnUs : Lang("EN-US") {
 
@@ -16,13 +16,13 @@ class LangEnUs : Lang("EN-US") {
     override fun gui_recipeHash_label() = "§aHashCode:"
     override fun gui_recipeHash_code(hashcode: String) = "§7 $hashcode"
 
-    override fun gui_toolbar_prev_title(prev: Int, total: Int) = "§aPrevious Page"
-    override fun gui_toolbar_prev_desc(prev: Int, total: Int) = listOf(
+    override fun gui_toolbar_prev_title(cur: Int, prev: Int, total: Int) = "§aPrevious Page"
+    override fun gui_toolbar_prev_desc(cur: Int, prev: Int, total: Int) = listOf(
             "§bGo to page $prev/$total"
     )
 
-    override fun gui_toolbar_next_title(next: Int, total: Int) = "§aNext Page"
-    override fun gui_toolbar_next_desc(next: Int, total: Int) = listOf(
+    override fun gui_toolbar_next_title(cur: Int, next: Int, total: Int) = "§aNext Page"
+    override fun gui_toolbar_next_desc(cur: Int, next: Int, total: Int) = listOf(
             "§bGo to page $next/$total"
     )
 
