@@ -40,10 +40,21 @@ public class GUIButtonRecipe extends GUIButton {
         this.recipe = recipe;
     }
 
+    private int getMultiplier() {
+        int result = gui.getMultiplier();
+        int displayAmount = recipe.getDisplayResult().getAmount();
+
+        if (displayAmount * result <= 64) {
+            return result;
+        } else {
+            return 64 / displayAmount;
+        }
+    }
+
     @Override
     public ItemStack getItem() {
         LanguageConfig lang = FastCraft.lang();
-        int mult = gui.getMultiplier();
+        int mult = getMultiplier();
 
         // Add the ingredients to the lore of the item
         ItemStack item = recipe.getDisplayResult().clone();
@@ -104,10 +115,10 @@ public class GUIButtonRecipe extends GUIButton {
      */
     @Override
     public boolean isVisible() {
-        int amount = recipe.getDisplayResult().getAmount() * gui.getMultiplier();
+        int amount = recipe.getDisplayResult().getAmount() * getMultiplier();
 
         ItemStack[] contents = gui.getPlayer().getInventory().getContents();
-        return recipe.removeIngredients(contents, gui.getMultiplier());
+        return recipe.removeIngredients(contents, getMultiplier());
     }
 
     @Override
@@ -115,7 +126,7 @@ public class GUIButtonRecipe extends GUIButton {
         if (ignoreClicks.contains(invEvent.getClick())) return false;
 
         // Craft the items, and return if unsuccessful
-        List<ItemStack> results = recipe.craft(gui, gui.getMultiplier());
+        List<ItemStack> results = recipe.craft(gui, getMultiplier());
         if (results == null) {
             gui.updateLayout();
             return false;
@@ -123,21 +134,21 @@ public class GUIButtonRecipe extends GUIButton {
 
         // Give the player the result items
         switch (invEvent.getClick()) {
-        case DROP:
-        case CONTROL_DROP:
-            // Drop items on the ground.
-            for (ItemStack is : results) {
-                invEvent.getView().setItem(InventoryView.OUTSIDE, is);
-            }
-            break;
-        default:
-            // Add to inventory. Drop rest on ground if not enough space.
-            Inventory inv = this.gui.getPlayer().getInventory();
-            ItemStack[] resultsArr = new ItemStack[results.size()];
-            for (ItemStack is : inv.addItem(results.toArray(resultsArr)).values()) {
-                invEvent.getView().setItem(InventoryView.OUTSIDE, is);
-            }
-            break;
+            case DROP:
+            case CONTROL_DROP:
+                // Drop items on the ground.
+                for (ItemStack is : results) {
+                    invEvent.getView().setItem(InventoryView.OUTSIDE, is);
+                }
+                break;
+            default:
+                // Add to inventory. Drop rest on ground if not enough space.
+                Inventory inv = this.gui.getPlayer().getInventory();
+                ItemStack[] resultsArr = new ItemStack[results.size()];
+                for (ItemStack is : inv.addItem(results.toArray(resultsArr)).values()) {
+                    invEvent.getView().setItem(InventoryView.OUTSIDE, is);
+                }
+                break;
         }
 
         gui.updateLayout();
