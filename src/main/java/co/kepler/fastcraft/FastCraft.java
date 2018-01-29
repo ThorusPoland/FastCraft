@@ -76,7 +76,7 @@ public class FastCraft extends JavaPlugin {
      * Unload FastCraft.
      */
     public static void unload() {
-        GUI.disposeAll();
+        //GUI.disposeAll(); // Causes crash on a couple servers
         PlayerManager.Prefs.saveAllPrefs();
     }
 
