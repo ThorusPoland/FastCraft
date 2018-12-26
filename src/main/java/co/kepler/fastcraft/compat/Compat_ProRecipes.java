@@ -3,7 +3,7 @@ package co.kepler.fastcraft.compat;
 import co.kepler.fastcraft.recipes.FastRecipe;
 import co.kepler.fastcraft.recipes.Ingredient;
 import mc.mcgrizzz.prorecipes.ProRecipes;
-import mc.mcgrizzz.prorecipes.RecipeAPI;
+import mc.mcgrizzz.prorecipes.api.RecipeAPI;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
