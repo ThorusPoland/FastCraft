@@ -42,7 +42,7 @@ repositories {
 
 dependencies {
     compile "org.bukkit:bukkit:$version_bukkit"
-    compile files('lib/RecipesAPI.jar')
+    compile files('lib/ProRecipes.jar')
 }
 
 processResources {
